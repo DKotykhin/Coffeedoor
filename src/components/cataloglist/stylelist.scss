@@ -1,0 +1,62 @@
+@import '../../helpers/variables.scss';
+.coffee_list {
+    text-align: center;
+    .coffee_list_title {
+        padding: 20px;
+        font-size: 45px;
+        text-align: center;
+        font-weight: 500;
+    }
+    .coffee_list_subtitle {
+        font-size: 25px;
+        text-align: center;
+        padding-bottom: 30px;
+    }
+    .coffee_list_card {
+        display: inline-block;
+        margin: 15px;
+        vertical-align: top;
+        text-align: start;
+        &_name {
+            font-size: 26px;
+            font-weight: 700;
+            padding-top: 8px;
+            padding-bottom: 16px;
+        }
+        &_price {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+    }
+    &_buttons .more_button,
+    &_buttons .basket_button {
+        @include button;
+        padding: 10px 20px;
+        margin-bottom: 10px;
+        width: 140px;
+    }
+    &_buttons .basket_button {
+        color: white;
+        border: 1px solid $firm_mint;
+        background-color: $firm_mint;
+        &:hover {
+            color: black;
+        }
+    }
+    &_buttons .more_button {
+        color: black;
+        border: 1px solid black;
+        &:hover {
+            background-color: $dark_grey;
+            color: white;
+        }
+    }
+    @media (max-width: 768px) {
+        .coffee_list_title {
+            font-size: 30px;
+        }
+        .coffee_list_subtitle {
+            font-size: 20px;
+        }
+    }
+}
