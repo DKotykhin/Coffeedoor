@@ -41,6 +41,10 @@
             font-size: 18px;
             font-weight: 300;
             color: black;
+            text-decoration-color: rgba(0, 0, 0, 0.3);
+            &:hover {
+                text-decoration-color: black;
+            }
         }
     }
     @media (max-width: 768px) {

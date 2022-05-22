@@ -10,7 +10,7 @@ const TitleBlock = () => {
         <>
             <Container maxWidth="md" className="title_block">
                 <Link to="/">                    
-                    <img src={img} style={{ width: 600 }} alt="logo" />
+                    <img src={img} alt="logo" />
                 </Link>
                 <Typography className="titleblock_name" component="h2">
                     Меню кав'ярні

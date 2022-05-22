@@ -6,10 +6,10 @@ const initialState = {
 };
 
 const CatalogListSlice = createSlice({
-    name: 'shopitems',
+    name: 'busket',
     initialState,
     reducers: {
-        shopitems: (state, action) => {
+        shopItems: (state, action) => {
             state.data = action.payload
         },
         shopUpdate: state => {
@@ -22,7 +22,7 @@ const {actions, reducer} = CatalogListSlice;
 
 export default reducer;
 export const {
-    shopitems,
+    shopItems,
     shopUpdate,
     process,    
     data,    
