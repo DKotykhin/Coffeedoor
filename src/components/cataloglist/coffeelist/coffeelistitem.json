@@ -1,0 +1,27 @@
+{
+    "coffeeitems": [{
+            "title": "Кава в зернах",
+            "name": "Brazil Cerrado",
+            "weight": "250г",
+            "price": "189 грн",
+            "description": "Горіхово-шоколадні ноти, ромовий бісквіт, солона карамель. Обсмаження: Еспресо. Спосіб обробки зерна: натуральний. 100% арабіка",
+            "img": "coffee/Brazil Cerrado.JPG"
+        },
+        {
+            "title": "Кава в зернах",
+            "name": "Tanzania AA Yetu Tamu",
+            "weight": "250г",
+            "price": "229 грн",
+            "description": "Виноград, лайм, какао. Обсмаження: Фільтр. Спосіб обробки зерна: митий. 100% арабіка",
+            "img": "coffee/Tanzania AA Yetu Tamu.JPG"
+        },
+        {
+            "title": "Кава в зернах",
+            "name": "Honduras Beneficio Santa Rosa",
+            "weight": "250г",
+            "price": "199 грн",
+            "description": "Горіх, іриска, карамельне яблуко, молочний шоколад. Обсмаження: Еспресо. Спосіб обробки зерна: митий. 100% арабіка",
+            "img": "coffee/Honduras Beneficio Santa Rosa.JPG"
+        }
+    ]
+}

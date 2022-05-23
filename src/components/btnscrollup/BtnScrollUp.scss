@@ -1,0 +1,11 @@
+.btn-scroll-up {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    .btn-scroll_icon {
+        font-size: 45px;
+        color: rgb(160, 160, 160);
+        border: 3px solid rgb(160, 160, 160);
+        border-radius: 50%;
+    }
+}

@@ -22,7 +22,7 @@ export default function NavDrawer() {
 
     const groupOfTitle_1 = [
         { title: "Кава в зернах", id: "#coffee_list" },
-        { title: "Листовий чай", id: "#" },
+        { title: "Листовий чай", id: "#tea_list" },
         { title: "Кавомолки", id: "#" },
         { title: "Аксессуари", id: "#" },
         { title: "Варення", id: "#" },

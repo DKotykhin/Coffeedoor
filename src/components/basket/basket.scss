@@ -1,0 +1,11 @@
+@import '../../helpers/variables.scss';
+.basket {
+    position: fixed;
+    right: 40px;
+    bottom: 50%;
+    cursor: pointer;
+    .basket_icon {
+        font-size: 60px;
+        color: $dark_grey;
+    }
+}
