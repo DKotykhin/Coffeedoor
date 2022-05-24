@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux";
 
 import { Typography, Button } from "@mui/material";
 import { Card, CardActions, CardContent, CardMedia } from '@mui/material';
-import { shopItems } from "./CatalogListSlice";
+import { shopAddItems } from "./CatalogListSlice";
 
 import './stylelist.scss';
 
@@ -11,7 +11,7 @@ const CatalogItem = (props) => {
 
     const dispatch = useDispatch();
     const onBasketButton = (basketItem) => {
-        dispatch(shopItems(basketItem));       
+        dispatch(shopAddItems(basketItem));       
     }
 
     return (                   
@@ -27,7 +27,7 @@ const CatalogItem = (props) => {
                     {title} {name}, {weight}
                 </Typography>
                 <Typography className="catalog_list_card_price">
-                    {price}
+                    {price} грн
                 </Typography>
                 <Typography className="catalog_list_card_desc" variant="body2" color="text.secondary">
                     {description}

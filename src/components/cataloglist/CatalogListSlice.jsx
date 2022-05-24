@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {   
-    process: 'waiting',
+const initialState = {    
     data: [],
     totalQuantity: null,    
 };
@@ -10,7 +9,7 @@ const CatalogListSlice = createSlice({
     name: 'basket',
     initialState,
     reducers: {
-        shopItems: (state, action) => {
+        shopAddItems: (state, action) => {
             const itemIndex = state.data.findIndex(orderItem => orderItem.name === action.payload.name);
             const newItem = {
                 ...action.payload,
@@ -33,11 +32,12 @@ const CatalogListSlice = createSlice({
             }         
             
             //state.totalQuantity = state.data.length
-            state.totalQuantity = state.data.reduce((previousValue, currentValue) => previousValue + currentValue.quantity, 0);
+            state.totalQuantity = state.data.reduce((sum, currentValue) => sum + currentValue.quantity, 0);
                         
         },
-        shopUpdate: state => {
-            state.process = 'loaded';
+        shopRemoveItems: (state, action) => {
+            const newRemoveOrder = state.data.filter(item => item.name !== action.payload);            
+            state.data = newRemoveOrder;
         }
     }
 });
@@ -46,9 +46,8 @@ const {actions, reducer} = CatalogListSlice;
 
 export default reducer;
 export const {
-    shopItems,
-    shopUpdate,
-    process,    
+    shopAddItems,
+    shopRemoveItems,       
     data,
     totalQuantity    
 } = actions;
