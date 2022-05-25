@@ -1,7 +1,7 @@
 import { Container, Typography, Box } from "@mui/material";
 
 import CatalogItem from "../CatalogItem";
-import  coffeeitems from '../coffeelist/coffeelistitem.json';
+import  coffeeitems from '../../../api/catalog/goodsitems/coffeelistitem.json';
 
 import '../stylelist.scss';
 

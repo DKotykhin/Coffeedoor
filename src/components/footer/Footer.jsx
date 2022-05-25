@@ -13,7 +13,7 @@ const Footer = () => {
                 <Link href="https://www.facebook.com/Coffeedoor.Kharkov">
                     <FacebookIcon className='footer_icon'/>
                 </Link>
-                <Link href="#">
+                <Link href="https://www.instagram.com/coffeedoor.kh/">
                     <InstagramIcon className='footer_icon'/>
                 </Link>
                 <Link href="https://t.me/Dmytro_Kotykhin">

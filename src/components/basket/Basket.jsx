@@ -6,7 +6,9 @@ import { Box, Badge, Modal, Typography, Button } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import ShoppingBasketOutlinedIcon from "@mui/icons-material/ShoppingBasketOutlined";
 import CloseIcon from '@mui/icons-material/Close';
-import { shopRemoveItems } from "../cataloglist/CatalogListSlice";
+import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
+import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
+import { shopRemoveItems, basketAddQuantity, basketRemoveQuantity } from "../cataloglist/CatalogListSlice";
 
 import "./basket.scss";
 
@@ -44,6 +46,12 @@ const Basket = () => {
     const handleRemove = (basketItem) => {
         dispatch(shopRemoveItems(basketItem));        
     }
+    const handleDecrement = (basketItem) => {
+        dispatch(basketRemoveQuantity(basketItem));
+    }
+    const handleIncrement = (basketItem) => {
+        dispatch(basketAddQuantity(basketItem));
+    }
     
         return (
             <>   
@@ -73,7 +81,14 @@ const Basket = () => {
                                             <CloseIcon className="modal_icon" onClick={() => handleRemove(item.name)}/>
                                         </Box>
                                         <Typography className="modal_price">
-                                            {item.quantity}{" x "}{item.price}{" грн = "}{item.quantity * item.price}{" грн"}                                            
+                                            <RemoveCircleOutlineIcon 
+                                                className="add_remove_icons"
+                                                onClick={() => handleDecrement(item.name)}/>
+                                            {" "}{item.quantity}{" "}
+                                            <AddCircleOutlineIcon 
+                                                className="add_remove_icons"
+                                                onClick={() => handleIncrement(item.name)}/>
+                                            {" x "}{item.price}{" грн = "}{item.quantity * item.price}{" грн"}                                            
                                         </Typography>
                                     </Box>
                                 )
@@ -84,7 +99,7 @@ const Basket = () => {
                             {basketList.reduce((sum, currentValue) => sum + +currentValue.price * currentValue.quantity, 0)}
                             {" грн"}
                         </Typography>
-                        <Button className="buy_button">Купити</Button>
+                        <Button className="buy_button" onClick={() => console.log(basketList)}>Купити</Button>
                     </Box>
                 </Modal>                
             </>

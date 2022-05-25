@@ -19,7 +19,7 @@ const CatalogItem = (props) => {
             <CardMedia
                 component="img"
                 height="345"
-                image={require(`../../images/catalog/${img}`)}
+                image={require(`../../api/catalog/goodsimages/${img}`)}
                 alt={name}
             />
             <CardContent>
