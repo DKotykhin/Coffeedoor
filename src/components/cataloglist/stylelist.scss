@@ -1,6 +1,5 @@
 @import '../../helpers/variables.scss';
 .catalog_list {
-    // text-align: center;
     .catalog_list_box {
         display: flex;
         justify-content: center;
@@ -19,12 +18,7 @@
         padding-bottom: 30px;
     }
     .catalog_list_card {
-        // display: inline-block;
-        // position: relative;
-        // min-height: 670px;
         margin: 15px;
-        // vertical-align: top;
-        // text-align: start;
         &_name {
             font-size: 24px;
             font-weight: 700;
@@ -40,16 +34,11 @@
             min-height: 80px;
         }
     }
-    // .catalog_list_buttons {
-    //     position: absolute;
-    //     left: 5px;
-    //     bottom: 0px
-    // }
     &_buttons .more_button,
     &_buttons .basket_button {
         @include button;
         padding: 10px;
-        margin: 10px 15px;
+        margin: 10px auto;
         width: 140px;
     }
     &_buttons .basket_button {
@@ -58,6 +47,7 @@
         background-color: $firm_mint;
         &:hover {
             color: black;
+            background-color: #fff;
         }
     }
     &_buttons .more_button {

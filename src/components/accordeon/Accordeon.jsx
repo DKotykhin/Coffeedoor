@@ -10,7 +10,7 @@ import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandCircleDown';
 
 import './accordeon.scss';
-import AccordeonDetailsItems from './accordeonItems.json';
+import AccordeonDetailsItems from '../../api/menu/menuItems.json';
 
 
 const Accordion = styled((props) => (

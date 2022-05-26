@@ -9,7 +9,7 @@ const CatalogListSlice = createSlice({
     name: 'basket',
     initialState,
     reducers: {
-        shopAddItems: (state, action) => {
+        basketAddItems: (state, action) => {
             const itemIndex = state.data.findIndex(item => item.name === action.payload.name);
             const newItem = {
                 ...action.payload,
@@ -34,9 +34,10 @@ const CatalogListSlice = createSlice({
             state.totalQuantity = state.data.reduce((sum, currentValue) => sum + currentValue.quantity, 0);                        
         },
 
-        shopRemoveItems: (state, action) => {
+        basketRemoveItems: (state, action) => {
             const newOrder = state.data.filter(item => item.name !== action.payload);            
             state.data = newOrder;
+            state.totalQuantity = state.data.reduce((sum, currentValue) => sum + currentValue.quantity, 0);
         },
 
         basketRemoveQuantity: (state, action) => {
@@ -51,6 +52,7 @@ const CatalogListSlice = createSlice({
                 }
             })
             state.data = newOrder;
+            state.totalQuantity = state.data.reduce((sum, currentValue) => sum + currentValue.quantity, 0);
         },
 
         basketAddQuantity: (state, action) => {
@@ -65,6 +67,7 @@ const CatalogListSlice = createSlice({
                 }
             })
             state.data = newOrder;
+            state.totalQuantity = state.data.reduce((sum, currentValue) => sum + currentValue.quantity, 0);
         },        
     }
 });
@@ -73,8 +76,8 @@ const {actions, reducer} = CatalogListSlice;
 
 export default reducer;
 export const {
-    shopAddItems,
-    shopRemoveItems,
+    basketAddItems,
+    basketRemoveItems,
     basketAddQuantity,
     basketRemoveQuantity,       
     data,

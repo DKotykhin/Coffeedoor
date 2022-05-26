@@ -2,14 +2,14 @@ import ErrorMessage from "../components/errorMessage/ErrorMessage";
 import { Link } from "react-router-dom";
 import { Typography } from "@mui/material";
 
-import "./page404.css";
+import "./page404.scss";
 
 const Page404 = () => {
     return (
         <div>
             <ErrorMessage />
-            <Typography id="page">Страница не найдена</Typography>
-            <Link className="link" to="/">Вернуться на главную</Link>
+            <Typography className="page">Сторінка не знайдена</Typography>
+            <Link className="link" to="/">Повернутися на головну</Link>
         </div>
     );
 };

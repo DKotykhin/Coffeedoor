@@ -3,16 +3,16 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import {lazy, Suspense} from 'react';
 
 import Spinner from '../components/spinner/Spinner';
+import Footer from "../components/footer/Footer";
 
 const Page404 = lazy(() => import('../pages/Page404'));
 const MainPage = lazy(() => import('../pages/MainPage'));
 const MenuPage = lazy(() => import('../pages/MenuPage'));
 
-
 function App() {
     return (
-        <Router>
-            <div>                
+        <>
+            <Router>                          
                 <main>
                     <Suspense fallback={<Spinner/>}>
                         <Routes>
@@ -22,8 +22,9 @@ function App() {
                         </Routes>
                     </Suspense>
                 </main>
-            </div>
-        </Router>
+                <Footer/>            
+            </Router>
+        </>
     )
 }
 

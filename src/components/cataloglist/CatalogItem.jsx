@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux";
 
 import { Typography, Button } from "@mui/material";
 import { Card, CardActions, CardContent, CardMedia } from '@mui/material';
-import { shopAddItems } from "./CatalogListSlice";
+import { basketAddItems } from "./CatalogListSlice";
 
 import './stylelist.scss';
 
@@ -11,7 +11,7 @@ const CatalogItem = (props) => {
 
     const dispatch = useDispatch();
     const onBasketButton = (basketItem) => {
-        dispatch(shopAddItems(basketItem));       
+        dispatch(basketAddItems(basketItem));       
     }
 
     return (                   

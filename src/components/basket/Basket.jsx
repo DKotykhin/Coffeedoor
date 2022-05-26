@@ -2,13 +2,13 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 
-import { Box, Badge, Modal, Typography, Button } from "@mui/material";
+import { Box, Badge, Modal, Typography, Button, Divider } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import ShoppingBasketOutlinedIcon from "@mui/icons-material/ShoppingBasketOutlined";
 import CloseIcon from '@mui/icons-material/Close';
 import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
-import { shopRemoveItems, basketAddQuantity, basketRemoveQuantity } from "../cataloglist/CatalogListSlice";
+import { basketRemoveItems, basketAddQuantity, basketRemoveQuantity } from "../cataloglist/CatalogListSlice";
 
 import "./basket.scss";
 
@@ -44,7 +44,7 @@ const Basket = () => {
 
     const dispatch = useDispatch();
     const handleRemove = (basketItem) => {
-        dispatch(shopRemoveItems(basketItem));        
+        dispatch(basketRemoveItems(basketItem));        
     }
     const handleDecrement = (basketItem) => {
         dispatch(basketRemoveQuantity(basketItem));
@@ -55,7 +55,7 @@ const Basket = () => {
     
         return (
             <>   
-                {basketList.length && 
+                {basketList.length > 0 && 
                 <Box className="basket" onClick={handleOpen}>
                     <StyledBadge badgeContent={totalQuantity}>
                         <ShoppingBasketOutlinedIcon className="basket_icon" />
@@ -72,7 +72,7 @@ const Basket = () => {
                             Кошик
                         </Typography>
                         {
-                            basketList.length ? basketList.map((item, i) => (
+                            basketList.length > 0 ? basketList.map((item, i) => (
                                     <Box key={i}>
                                         <Box className="modal_block">
                                             <Typography className="modal_name">
@@ -90,6 +90,7 @@ const Basket = () => {
                                                 onClick={() => handleIncrement(item.name)}/>
                                             {" x "}{item.price}{" грн = "}{item.quantity * item.price}{" грн"}                                            
                                         </Typography>
+                                        <Divider sx={{ mt:2 }}/>
                                     </Box>
                                 )
                             ) : <Box className="modal_subtitle">Нічого немає</Box>
