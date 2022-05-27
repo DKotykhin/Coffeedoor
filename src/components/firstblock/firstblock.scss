@@ -4,7 +4,11 @@
     background-attachment: fixed;
     text-align: center;
     color: white;
+    // min-height: 700px;
     // margin-top: 20px;
+    @media (max-width: 768px) {
+        background-attachment: scroll;
+    }
     .first_block {
         &_title {
             padding-top: 100px;
@@ -25,10 +29,10 @@
         }
         @media (max-width: 768px) {
             &_title {
-                font-size: 70px;
+                font-size: 65px;
             }
             &_subtitle {
-                font-size: 30px;
+                font-size: 25px;
             }
         }
         &_icon {
@@ -63,8 +67,5 @@
                 }
             }
         }
-    }
-    @media (max-width: 768px) {
-        background-attachment: scroll;
     }
 }

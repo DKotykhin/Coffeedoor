@@ -10,6 +10,7 @@ import NavDrawer from "../components/drawer/Drawer";
 import FirstBlock from "../components/firstblock/FirstBlock";
 import InfoBlock from "../components/infoblock/InfoBlock";
 
+
 const MainPage = () => {
     return (
         <div>
@@ -26,7 +27,7 @@ const MainPage = () => {
                 <NavDrawer />
             </header>
             <FirstBlock />
-            <InfoBlock />
+            <InfoBlock />            
             <CoffeeList />
             <TeaList />
             <AboutBlock />

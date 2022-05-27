@@ -52,10 +52,15 @@
             font-size: 50px;
         }
         .infoblock_items {
-            margin-left: 20px;
+            margin-left: 15px;
+            padding: 10px;
+            .infoblock_item_2,
+            .infoblock_item_3 {
+                font-size: 15px;
+            }
         }
         .infoblock_title {
-            font-size: 35px;
+            font-size: 32px;
         }
         .infoblock_subtitle {
             font-size: 20px;

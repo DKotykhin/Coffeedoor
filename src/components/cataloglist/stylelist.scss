@@ -11,20 +11,31 @@
         text-align: center;
         font-weight: 500;
         text-transform: uppercase;
+        @media (max-width: 768px) {
+            font-size: 30px;
+        }
     }
     .catalog_list_subtitle {
         font-size: 25px;
         text-align: center;
         padding-bottom: 30px;
+        @media (max-width: 768px) {
+            font-size: 18px;
+        }
     }
     .catalog_list_card {
         margin: 15px;
+        // text-align: left;
+        //min-height: 650px;
         &_name {
             font-size: 24px;
             font-weight: 700;
             padding-top: 8px;
             padding-bottom: 16px;
             min-height: 78px;
+            @media (max-width: 600px) {
+                font-size: 19px;
+            }
         }
         &_price {
             font-size: 25px;
@@ -32,6 +43,10 @@
         }
         &_desc {
             min-height: 80px;
+            @media (max-width: 600px) {
+                font-size: 13px;
+                min-height: 100px;
+            }
         }
     }
     &_buttons .more_button,
@@ -40,6 +55,11 @@
         padding: 10px;
         margin: 10px auto;
         width: 140px;
+        @media (max-width: 600px) {
+            font-size: 12px;
+            max-width: 100px;
+            padding: 6px;
+        }
     }
     &_buttons .basket_button {
         color: white;
@@ -58,12 +78,36 @@
             color: white;
         }
     }
-    @media (max-width: 768px) {
-        .catalog_list_title {
-            font-size: 30px;
-        }
-        .catalog_list_subtitle {
-            font-size: 20px;
+    .swiper {
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    .swiper-slide {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+        color: $firm_mint;
+        @media (max-width: 900px) {
+            display: none;
         }
     }
 }
