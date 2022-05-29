@@ -52,8 +52,8 @@ const Basket = () => {
     }
     const handleBasket = (basketItem) => {
         setOpen(false);
-        console.log(basketItem);
         dispatch(basketAllRemove());
+        if (basketItem.length) console.log(basketItem);
     }
     const totalQuantity = basketdata.reduce((sum, currentValue) => sum + currentValue.quantity, 0);
     

@@ -28,14 +28,19 @@ const CatalogItem = (props) => {
             />
             <CardContent>
                 <Typography className="catalog_list_card_name">
-                    {title} {name}
+                   {title} {name}
                 </Typography>
                 <Typography className="catalog_list_card_price">
-                    {price}{' грн'}
+                   {price}{' грн'}
                 </Typography>
                 <Typography className="catalog_list_card_desc" variant="body2" color="text.secondary">
-                    {description}{' Вага: '}{weight}
+                    {description}
                 </Typography>
+                { weight && 
+                    <Typography variant="body2" color="text.secondary">
+                        {'Вага: '}{weight}
+                    </Typography>
+                }
             </CardContent>
             <CardActions className="catalog_list_buttons">
                 <Button className="more_button"

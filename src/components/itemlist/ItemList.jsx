@@ -88,7 +88,7 @@ export default function ItemList() {
                             {itemdata.price}
                             {" грн"}
                         </Typography>
-                        <Typography className='item_list_price'>
+                        <Typography className='item_list_quantity'>
                             <RemoveCircleOutlineIcon
                                 className="item_list_remove"
                                 onClick={() => handleDecrement()}
@@ -102,14 +102,23 @@ export default function ItemList() {
                                 В Кошик
                             </Button>
                         </Typography>
-                        <Typography sx={{ mt: 2 }}>
-                            {"Вага: "}
-                            {itemdata.weight}
-                        </Typography>
-                        <Typography>
-                            {"Виробник: "}
-                            {itemdata.tm}
-                        </Typography>
+                        { itemdata.weight &&                        
+                            <Typography>
+                                {"Вага: "}
+                                {itemdata.weight}
+                            </Typography>
+                        }
+                        { itemdata.sort &&
+                            <Typography>                                
+                                {itemdata.sort}
+                            </Typography>
+                        }
+                        { itemdata.tm &&
+                            <Typography>
+                                {"Виробник: "}
+                                {itemdata.tm}
+                            </Typography>                        
+                        }
                         <Typography sx={{ mt: 2 }}>
                             {itemdata.description}
                         </Typography>

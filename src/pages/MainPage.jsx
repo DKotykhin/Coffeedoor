@@ -5,6 +5,8 @@ import AboutBlock from "../components/aboutblock/AboutBlock";
 import Basket from "../components/basket/Basket";
 //import BtnScrollUp from "../components/btnscrollup/BtnScrollUp";
 import CoffeeList from "../components/cataloglist/goodslists/CoffeeList";
+import JamList from "../components/cataloglist/goodslists/JamList";
+import MillList from "../components/cataloglist/goodslists/MillList";
 import TeaList from "../components/cataloglist/goodslists/TeaList";
 import NavDrawer from "../components/drawer/Drawer";
 import FirstBlock from "../components/firstblock/FirstBlock";
@@ -31,6 +33,8 @@ const MainPage = () => {
             <InfoBlock />            
             <CoffeeList />
             <TeaList />
+            <MillList/>
+            <JamList/>
             <ItemList/>
             <AboutBlock />
             {/* <BtnScrollUp/>           */}

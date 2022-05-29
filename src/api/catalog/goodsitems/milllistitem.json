@@ -1,0 +1,39 @@
+{
+    "millitems": [{
+            "title": "Кавомолка",
+            "name": "Kalita KH-5",
+            "price": "2290",
+            "description": "Ручна вінтажна кавомолка Kalita KH-5. Країна виробник: Японія",
+            "img": "mills/Kalita_KH-5.jpg",
+            "tm": "TM Kalita",
+            "sort": "Колір: мідний"
+        },
+        {
+            "title": "Кавомолка",
+            "name": "HARIO Скіртон ПЛЮС",
+            "price": "1499",
+            "description": "Японська професійна кавомолка HARIO Скіртон ПЛЮС. Оновлена ​​версія",
+            "img": "mills/HARIO_Скіртон_ПЛЮС.jpg",
+            "tm": "TM Hario",
+            "sort": "Колір: чорний"
+        },
+        {
+            "title": "Кавомолка",
+            "name": "HARIO Mini Mill Slim+",
+            "price": "1299",
+            "description": "Кавомолка HARIO Mini Mill Slim+ с керамічними жерновами та регулюванням помола",
+            "img": "mills/HARIO_Mini_Mill_Slim+.jpg",
+            "tm": "TM Hario",
+            "sort": "Колір: прозорий"
+        },
+        {
+            "title": "Кавомолка",
+            "name": "HARIO Mini Mill Slim Pro",
+            "price": "1899",
+            "description": "Кавомолка HARIO Mini Mill Slim Pro з керамічними жерновами та регулюванням помолу",
+            "img": "mills/HARIO_Mini_Mill_Slim_Pro.jpg",
+            "tm": "TM Hario",
+            "sort": "Колір: сірий"
+        }
+    ]
+}

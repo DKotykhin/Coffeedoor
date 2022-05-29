@@ -23,9 +23,9 @@ export default function NavDrawer() {
     const groupOfTitle_1 = [
         { title: "Кава в зернах", id: "#coffee_list" },
         { title: "Листовий чай", id: "#tea_list" },
-        { title: "Кавомолки", id: "#" },
-        { title: "Аксессуари", id: "#" },
-        { title: "Варення", id: "#" },
+        { title: "Кавомолки", id: "#mill_list" },
+        { title: "Аксессуари", id: "#acc_list" },
+        { title: "Варення", id: "#jam_list" },
     ];
     const groupOfTitle_2 = [
         { title: "Про нас", id: "#about_block" },
