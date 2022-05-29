@@ -2,7 +2,8 @@ import { useDispatch } from "react-redux";
 
 import { Typography, Button } from "@mui/material";
 import { Card, CardActions, CardContent, CardMedia } from '@mui/material';
-import { basketAddItems } from "./CatalogListSlice";
+import { basketAddItems } from "../basket/BasketListSlice";
+import { itemAddItems } from "../itemlist/ItemListSlice";
 
 import './stylelist.scss';
 
@@ -12,6 +13,9 @@ const CatalogItem = (props) => {
     const dispatch = useDispatch();
     const onBasketButton = (basketItem) => {
         dispatch(basketAddItems(basketItem));       
+    }
+    const onItemButton = (ItemItem) => {        
+        dispatch(itemAddItems(ItemItem));       
     }
 
     return (                   
@@ -24,17 +28,20 @@ const CatalogItem = (props) => {
             />
             <CardContent>
                 <Typography className="catalog_list_card_name">
-                    {title} {name}, {weight}
+                    {title} {name}
                 </Typography>
                 <Typography className="catalog_list_card_price">
-                    {price} грн
+                    {price}{' грн'}
                 </Typography>
                 <Typography className="catalog_list_card_desc" variant="body2" color="text.secondary">
-                    {description}
+                    {description}{' Вага: '}{weight}
                 </Typography>
             </CardContent>
             <CardActions className="catalog_list_buttons">
-                <Button className="more_button">Детальніше</Button>
+                <Button className="more_button"
+                    onClick={() => onItemButton(props)}
+                    >
+                    Детальніше</Button>
                 <Button className="basket_button" 
                     onClick={() => onBasketButton({
                         title,

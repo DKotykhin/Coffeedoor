@@ -1,6 +1,5 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 import { Box, Badge, Modal, Typography, Button, Divider } from "@mui/material";
 import { styled } from "@mui/material/styles";
@@ -8,7 +7,7 @@ import ShoppingBasketOutlinedIcon from "@mui/icons-material/ShoppingBasketOutlin
 import CloseIcon from '@mui/icons-material/Close';
 import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
-import { basketRemoveItems, basketAddQuantity, basketRemoveQuantity } from "../cataloglist/CatalogListSlice";
+import { basketRemoveItems, basketAddQuantity, basketRemoveQuantity, basketAllRemove } from "./BasketListSlice";
 
 import "./basket.scss";
 
@@ -39,8 +38,7 @@ const Basket = () => {
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
-    const totalQuantity = useSelector((state) => state.totalQuantity);
-    const basketList = useSelector((state) => state.data);
+    const {basketdata} = useSelector((state) => state.basket);
 
     const dispatch = useDispatch();
     const handleRemove = (basketItem) => {
@@ -52,10 +50,16 @@ const Basket = () => {
     const handleIncrement = (basketItem) => {
         dispatch(basketAddQuantity(basketItem));
     }
+    const handleBasket = (basketItem) => {
+        setOpen(false);
+        console.log(basketItem);
+        dispatch(basketAllRemove());
+    }
+    const totalQuantity = basketdata.reduce((sum, currentValue) => sum + currentValue.quantity, 0);
     
         return (
             <>   
-                {basketList.length > 0 && 
+                {basketdata.length > 0 && 
                 <Box className="basket" onClick={handleOpen}>
                     <StyledBadge badgeContent={totalQuantity}>
                         <ShoppingBasketOutlinedIcon className="basket_icon" />
@@ -72,7 +76,7 @@ const Basket = () => {
                             Кошик
                         </Typography>
                         {
-                            basketList.length > 0 ? basketList.map((item, i) => (
+                            basketdata.length > 0 ? basketdata.map((item, i) => (
                                     <Box key={i}>
                                         <Box className="modal_block">
                                             <Typography className="modal_name">
@@ -97,10 +101,10 @@ const Basket = () => {
                         }                        
                         <Typography className="modal_total">
                             {"Всього: "}
-                            {basketList.reduce((sum, currentValue) => sum + +currentValue.price * currentValue.quantity, 0)}
+                            {basketdata.reduce((sum, currentValue) => sum + +currentValue.price * currentValue.quantity, 0)}
                             {" грн"}
                         </Typography>
-                        <Button className="buy_button" onClick={() => console.log(basketList)}>Купити</Button>
+                        <Button className="buy_button" onClick={() => handleBasket(basketdata)}>Купити</Button>
                     </Box>
                 </Modal>                
             </>

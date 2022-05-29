@@ -31,7 +31,7 @@ const TeaList = () => {
                         slidesPerView: 3                        
                     }                    
                 }}
-                rewind={true}
+                // rewind={true}
                 navigation={true}                
                 modules={[Navigation, Pagination]}
             >

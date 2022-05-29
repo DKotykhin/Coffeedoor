@@ -9,6 +9,7 @@ import TeaList from "../components/cataloglist/goodslists/TeaList";
 import NavDrawer from "../components/drawer/Drawer";
 import FirstBlock from "../components/firstblock/FirstBlock";
 import InfoBlock from "../components/infoblock/InfoBlock";
+import ItemList from "../components/itemlist/ItemList";
 
 
 const MainPage = () => {
@@ -30,6 +31,7 @@ const MainPage = () => {
             <InfoBlock />            
             <CoffeeList />
             <TeaList />
+            <ItemList/>
             <AboutBlock />
             {/* <BtnScrollUp/>           */}
             <Basket />

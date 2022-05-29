@@ -5,7 +5,8 @@
             "weight": "70г",
             "price": "135",
             "description": "Суміш китайських зелених чаїв зі смаком жовтої сливи, абрікосу, жасміну, квітів волошки, червоної та чорної смородини",
-            "img": "tea/Eternal Life_.JPG"
+            "img": "tea/Eternal Life_.JPG",
+            "tm": "TM SOHO"
         },
         {
             "title": "Чай",
@@ -13,7 +14,8 @@
             "weight": "70г",
             "price": "145",
             "description": "Суміш китайських білих та зелених чаїв зі смаком кислої вишні, кокосових чіпсів та бутонів троянд",
-            "img": "tea/White Cherry_.JPG"
+            "img": "tea/White Cherry_.JPG",
+            "tm": "TM SOHO"
         }
     ]
 }

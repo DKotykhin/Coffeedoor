@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper";
+import { Navigation } from "swiper";
 import { Container, Typography } from "@mui/material";
 
 import CatalogItem from "../CatalogItem";
@@ -19,7 +19,7 @@ const CoffeeList = () => {
                 Свіжообсмажена кава ТМ CoffeeDOOR
             </Typography>                       
             <Swiper
-                className="slider"
+                className="slider"                
                 slidesPerView={1.3}
                 spaceBetween={10}                
                 breakpoints={{                 
@@ -30,9 +30,9 @@ const CoffeeList = () => {
                         slidesPerView: 3                        
                     }                    
                 }}
-                rewind={true}
+                //rewind={true}
                 navigation={true}                
-                modules={[Navigation, Pagination]}
+                modules={[Navigation]}
             >
                 {coffeeitems.coffeeitems.map((item) => (
                     <SwiperSlide key={item.name} >

@@ -1,8 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
 
-import reducer from '../components/cataloglist/CatalogListSlice';
+import basket from '../components/basket/BasketListSlice';
+import itempage from '../components/itemlist/ItemListSlice';
 
-export const store = configureStore({
-  reducer: reducer,
+
+const store = configureStore({
+  reducer: { basket, itempage }, 
   devTools: process.env.NODE_ENV !== 'production'  
 });
+
+export default store;
