@@ -1,25 +1,15 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 
-import { Box, Badge, Modal, Typography, Button, Divider } from "@mui/material";
-import { styled } from "@mui/material/styles";
-import ShoppingBasketOutlinedIcon from "@mui/icons-material/ShoppingBasketOutlined";
+import { Backdrop, Box, Modal, Typography, Button, Divider, Fade } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
+
 import { basketRemoveItems, basketAddQuantity, basketRemoveQuantity, basketAllRemove } from "./BasketListSlice";
+import BasketIcon from "./BasketIcon";
 
 import "./basket.scss";
-
-const StyledBadge = styled(Badge)(() => ({
-    "& .MuiBadge-badge": {
-        color: "#00a1b6",
-        right: -3,
-        top: 13,
-        border: `2px solid #00a1b6`,
-        padding: "0 3px",
-    },
-}));
 
 const StyledModal = {
     position: 'absolute',
@@ -36,11 +26,12 @@ const StyledModal = {
 
 const Basket = () => {
     const [open, setOpen] = React.useState(false);
+    const {basketdata} = useSelector((state) => state.basket);
+    const dispatch = useDispatch();
+
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
-    const {basketdata} = useSelector((state) => state.basket);
 
-    const dispatch = useDispatch();
     const handleRemove = (basketItem) => {
         dispatch(basketRemoveItems(basketItem));        
     }
@@ -54,58 +45,59 @@ const Basket = () => {
         setOpen(false);
         dispatch(basketAllRemove());
         if (basketItem.length) console.log(basketItem);
-    }
-    const totalQuantity = basketdata.reduce((sum, currentValue) => sum + currentValue.quantity, 0);
+    }   
     
         return (
-            <>   
-                {basketdata.length > 0 && 
-                <Box className="basket" onClick={handleOpen}>
-                    <StyledBadge badgeContent={totalQuantity}>
-                        <ShoppingBasketOutlinedIcon className="basket_icon" />
-                    </StyledBadge>
-                </Box>}               
+            <>                   
+                <BasketIcon handleOpen={handleOpen}/>              
                 
                 <Modal
                     open={open}
-                    onClose={handleClose}                   
+                    onClose={handleClose}
+                    closeAfterTransition
+                    BackdropComponent={Backdrop}
+                    BackdropProps={{
+                        timeout: 500,
+                    }}                  
                     >
-                    <Box sx={StyledModal} className='modal'>
-                        <CloseIcon className='modal_close' onClick={handleClose}/>
-                        <Typography className="modal_title" component="h2">
-                            Кошик
-                        </Typography>
-                        {
-                            basketdata.length > 0 ? basketdata.map((item, i) => (
-                                    <Box key={i}>
-                                        <Box className="modal_block">
-                                            <Typography className="modal_name">
-                                                {item.title} {item.name}
+                    <Fade in={open}>
+                        <Box sx={StyledModal} className='modal'>
+                            <CloseIcon className='modal_close' onClick={handleClose}/>
+                            <Typography className="modal_title" component="h2">
+                                Кошик
+                            </Typography>
+                            {
+                                basketdata.length > 0 ? basketdata.map((item, i) => (
+                                        <Box key={i}>
+                                            <Box className="modal_block">
+                                                <Typography className="modal_name">
+                                                    {item.title} {item.name}
+                                                </Typography>
+                                                <CloseIcon className="modal_icon" onClick={() => handleRemove(item.name)}/>
+                                            </Box>
+                                            <Typography className="modal_price">
+                                                <RemoveCircleOutlineIcon 
+                                                    className="add_remove_icons"
+                                                    onClick={() => handleDecrement(item.name)}/>
+                                                {" "}{item.quantity}{" "}
+                                                <AddCircleOutlineIcon 
+                                                    className="add_remove_icons"
+                                                    onClick={() => handleIncrement(item.name)}/>
+                                                {" x "}{item.price}{" грн = "}{item.quantity * item.price}{" грн"}                                            
                                             </Typography>
-                                            <CloseIcon className="modal_icon" onClick={() => handleRemove(item.name)}/>
+                                            <Divider sx={{ mt:2 }}/>
                                         </Box>
-                                        <Typography className="modal_price">
-                                            <RemoveCircleOutlineIcon 
-                                                className="add_remove_icons"
-                                                onClick={() => handleDecrement(item.name)}/>
-                                            {" "}{item.quantity}{" "}
-                                            <AddCircleOutlineIcon 
-                                                className="add_remove_icons"
-                                                onClick={() => handleIncrement(item.name)}/>
-                                            {" x "}{item.price}{" грн = "}{item.quantity * item.price}{" грн"}                                            
-                                        </Typography>
-                                        <Divider sx={{ mt:2 }}/>
-                                    </Box>
-                                )
-                            ) : <Box className="modal_subtitle">Нічого немає</Box>
-                        }                        
-                        <Typography className="modal_total">
-                            {"Всього: "}
-                            {basketdata.reduce((sum, currentValue) => sum + +currentValue.price * currentValue.quantity, 0)}
-                            {" грн"}
-                        </Typography>
-                        <Button className="buy_button" onClick={() => handleBasket(basketdata)}>Купити</Button>
-                    </Box>
+                                    )
+                                ) : <Box className="modal_subtitle">Нічого немає</Box>
+                            }                        
+                            <Typography className="modal_total">
+                                {"Всього: "}
+                                {basketdata.reduce((sum, currentValue) => sum + +currentValue.price * currentValue.quantity, 0)}
+                                {" грн"}
+                            </Typography>
+                            <Button className="buy_button" onClick={() => handleBasket(basketdata)}>Купити</Button>
+                        </Box>
+                    </Fade>    
                 </Modal>                
             </>
         );    

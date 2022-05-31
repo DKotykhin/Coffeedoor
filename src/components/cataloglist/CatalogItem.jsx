@@ -11,19 +11,13 @@ const CatalogItem = (props) => {
     const { title, name, description, price, weight, img } = props;
 
     const dispatch = useDispatch();
-    const onBasketButton = (basketItem) => {
-        dispatch(basketAddItems(basketItem));       
-    }
-    const onItemButton = (ItemItem) => {        
-        dispatch(itemAddItems(ItemItem));       
-    }
-
+    
     return (                   
         <Card sx={{ maxWidth: 345 }} className="catalog_list_card">
             <CardMedia
                 component="img"
                 height="345"
-                image={require(`../../api/catalog/goodsimages/${img}`)}
+                image={require(`api/catalog/goodsimages/${img}`)}
                 alt={name}
             />
             <CardContent>
@@ -44,16 +38,16 @@ const CatalogItem = (props) => {
             </CardContent>
             <CardActions className="catalog_list_buttons">
                 <Button className="more_button"
-                    onClick={() => onItemButton(props)}
+                    onClick={() => dispatch(itemAddItems(props))}
                     >
                     Детальніше</Button>
                 <Button className="basket_button" 
-                    onClick={() => onBasketButton({
+                    onClick={() => dispatch(basketAddItems({
                         title,
                         name, 
                         price,
                         weight 
-                        })}
+                        }))}
                     >
                     В кошик
                 </Button>

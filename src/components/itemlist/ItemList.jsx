@@ -56,8 +56,8 @@ export default function ItemList() {
         <div>
             {/* <Button onClick={handleOpen}>Open modal</Button> */}
             <Modal
-                aria-labelledby="transition-modal-title"
-                aria-describedby="transition-modal-description"
+                // aria-labelledby="transition-modal-title"
+                // aria-describedby="transition-modal-description"
                 open={open}
                 onClose={handleClose}
                 closeAfterTransition
@@ -74,9 +74,9 @@ export default function ItemList() {
                         />
                         {itemdata.img &&
                             <img
-                                component="img"
+                                // component="img"
                                 height="345"                            
-                                src={require(`../../api/catalog/goodsimages/${itemdata.img}`)}
+                                src={require(`api/catalog/goodsimages/${itemdata.img}`)}
                                 alt={itemdata.name}
                                 loading="lazy"
                             />
