@@ -4,7 +4,8 @@ import { Link as RouterLink } from "react-router-dom";
 import { List, ListItem } from "@mui/material";
 import { Box, Drawer, Divider, Link } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import img from "../../images/logo_small.ico";
+
+import img from "images/logo_small.ico";
 
 import "./drawer.scss";
 

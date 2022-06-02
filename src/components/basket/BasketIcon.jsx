@@ -7,15 +7,23 @@ import ShoppingBasketOutlinedIcon from "@mui/icons-material/ShoppingBasketOutlin
 
 import "./basket.scss";
 
-const StyledBadge = styled(Badge)(() => ({
-    "& .MuiBadge-badge": {
-        color: "#00a1b6",
-        right: -3,
-        top: 13,
-        border: `2px solid #00a1b6`,
-        padding: "0 3px",
-    },
-}));
+// const StyledBadge = styled(Badge)(() => ({
+//     "& .MuiBadge-badge": {
+//         color: "#00a1b6",        
+//         top: 10,
+//         border: `2px solid #00a1b6`,
+//         padding: "0 3px",
+//     },
+// }));
+
+const StyledBadge = styled(Badge)`
+    & .MuiBadge-badge {
+        color: #00a1b6;        
+        top: 10px;
+        border: 2px solid #00a1b6;
+        padding: 0 3px;
+    }
+`;
 
 const BasketIcon = ({handleOpen}) => {
 
