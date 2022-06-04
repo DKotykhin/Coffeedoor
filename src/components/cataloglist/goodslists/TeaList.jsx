@@ -20,7 +20,7 @@ const TeaList = () => {
         onSelectSort()
     }, [])
 
-    const handleClick = () => {
+    const filtersOpen = () => {
         setShowSelector(!showSelector);
         setTeaList([...teaitems.teaitems])
     }
@@ -32,7 +32,7 @@ const TeaList = () => {
                 item.sort[1] === sort            
             ));
         }       
-        setTeaList(data)
+        setTeaList(data)        
     }
 
     return (
@@ -49,14 +49,19 @@ const TeaList = () => {
                     <FilterAltOutlinedIcon/>
                 </ListItemIcon>
                 <ListItemText 
-                    onClick={() => handleClick()} 
+                    onClick={() => filtersOpen()} 
                     sx={{cursor: 'pointer'}}
                 >
                     Фільтри
                 </ListItemText>
             </ListItem>           
-                {showSelector && 
-                <SelectFilterItems onSelect={onSelectSort}/>
+                {showSelector &&
+                <>
+                    <SelectFilterItems onSelect={onSelectSort} quantity={teaList.length}/>                
+                    {/* <Typography className="catalog_list_select">
+                        {'вибрано: '}{teaList.length}
+                    </Typography> */}
+                </> 
                 }            
             <Swiper
                 className="slider"
