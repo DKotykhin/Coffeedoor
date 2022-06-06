@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 import { Container, Typography } from "@mui/material";
-import img from "./logo coffe-door-01.jpg";
+import img from "./Coffeedoor_logo.jpg";
 
 import "./titleblock.scss";
 

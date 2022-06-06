@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { useNavigate} from 'react-router-dom';
 
 import { Backdrop, Box, Modal, Typography, Divider, Fade } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
@@ -29,6 +30,7 @@ const StyledModal = {
 
 const Basket = () => {
     const [open, setOpen] = React.useState(false);
+    const navigate = useNavigate();
 
     const {basketdata} = useSelector((state) => state.basket);
     const dispatch = useDispatch();
@@ -54,7 +56,10 @@ const Basket = () => {
         console.log(data);
         setOpen(false);
         dispatch(basketAllRemove());
-        if (basketdata.length) console.log(basketdata);
+        if (basketdata.length) {
+            console.log(basketdata);
+            navigate('/thanks')
+        }
     }   
     
         return (
