@@ -13,8 +13,8 @@
 
 .modal {
     .modal_title {
-        text-align: center;
-        font-size: 20px;
+        // text-align: center;
+        font-size: 22px;
         font-weight: 500;
     }
     .modal_subtitle {
@@ -29,10 +29,15 @@
             font-size: 19px;
             font-weight: 500;
             margin-top: 16px;
+            margin-bottom: 8px;
         }
         .modal_icon {
             margin-top: 20px;
+            color: #808080;
             cursor: pointer;
+            &:hover {
+                color: #000;
+            }
         }
     }
     .modal_price {
@@ -56,7 +61,7 @@
         margin: 0 auto;
         margin-top: 15px;
         padding: 10px;
-        width: 140px;
+        width: 220px;
         color: white;
         border: 1px solid $firm_mint;
         background-color: $firm_mint;
@@ -69,6 +74,10 @@
         position: absolute;
         top: 25px;
         right: 25px;
+        color: #808080;
         cursor: pointer;
+        &:hover {
+            color: #000;
+        }
     }
 }

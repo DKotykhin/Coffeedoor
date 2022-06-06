@@ -11,8 +11,8 @@ const theme = createTheme({
     },
 });
 
-export default function SelectFilterItems({onSelect, quantity}) {
-    const [filter, setFilter] = React.useState([]);
+export default function SelectFilterItems({ onSelect, quantity }) {
+    const [newItem, setNewItem] = React.useState("");
 
     const filterItems = [
         { key: "всі чаї", value: "" },
@@ -27,35 +27,34 @@ export default function SelectFilterItems({onSelect, quantity}) {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    const handleSelect = (filter) => {
-        const newFilterItems = filterItems.map((item) => {
-            if (item.value === filter) {
-                return {
-                    ...item,
-                    color: true,
-                };
-            } else {
-                return {
-                    ...item,
-                    color: false,
-                };
-            }
-        });
-        setFilter(newFilterItems);
-        onSelect(filter)
+    const handleSelect = (filteredItem) => {
+        onSelect(filteredItem);
+        setNewItem(filteredItem);
     };
 
     return (
         <Box>
             <ThemeProvider theme={theme}>
-                <Stack direction="row" spacing={3} sx={{display: 'flex', flexWrap: 'wrap', mt:1}}>
-                    {filter.map((item) => (
+                <Stack
+                    direction="row"
+                    spacing={3}
+                    sx={{ display: "flex", flexWrap: "wrap", mt: 1 }}
+                >
+                    {filterItems.map((item) => (
                         <>
-                            <Badge badgeContent={item.color ? quantity : 0} color="primary">
-                                <Chip sx={{mb:2}}
+                            <Badge
+                                badgeContent={
+                                    item.value === newItem ? quantity : 0
+                                }
+                                color="primary"
+                            >
+                                <Chip
+                                    sx={{ mb: 2 }}
                                     variant="outlined"
                                     key={item.key}
-                                    color={item.color ? "primary" : "default"}
+                                    color={
+                                        item.value === newItem ? "primary" : "default"
+                                    }
                                     label={item.key}
                                     onClick={() => handleSelect(item.value)}
                                 />
@@ -67,4 +66,3 @@ export default function SelectFilterItems({onSelect, quantity}) {
         </Box>
     );
 }
-

@@ -1,13 +1,14 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 
-import { Backdrop, Box, Modal, Typography, Button, Divider, Fade } from "@mui/material";
+import { Backdrop, Box, Modal, Typography, Divider, Fade } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 
 import { basketRemoveItems, basketAddQuantity, basketRemoveQuantity, basketAllRemove } from "./BasketListSlice";
 import BasketIcon from "./BasketIcon";
+import BasketForm from "./BasketForm";
 
 import "./basket.scss";
 
@@ -16,8 +17,10 @@ const StyledModal = {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 500,
+    width: 500,    
     maxWidth: '90%',
+    maxHeight: '80%',
+    overflowY: "scroll",    
     bgcolor: 'background.paper',
     border: '2px solid #000',
     boxShadow: 24,
@@ -26,6 +29,7 @@ const StyledModal = {
 
 const Basket = () => {
     const [open, setOpen] = React.useState(false);
+
     const {basketdata} = useSelector((state) => state.basket);
     const dispatch = useDispatch();
 
@@ -41,16 +45,21 @@ const Basket = () => {
     const handleIncrement = (basketItem) => {
         dispatch(basketAddQuantity(basketItem));
     }
-    const handleBasket = (basketItem) => {
+    // const handleBasket = (basketItem) => {
+    //     setOpen(false);
+    //     dispatch(basketAllRemove());
+    //     if (basketItem.length) console.log(basketItem);
+    // }
+    const onSubmitForm = (data) => {
+        console.log(data);
         setOpen(false);
         dispatch(basketAllRemove());
-        if (basketItem.length) console.log(basketItem);
+        if (basketdata.length) console.log(basketdata);
     }   
     
         return (
             <>                   
-                <BasketIcon handleOpen={handleOpen}/>              
-                
+                <BasketIcon handleOpen={handleOpen}/>                
                 <Modal
                     open={open}
                     onClose={handleClose}
@@ -64,7 +73,7 @@ const Basket = () => {
                         <Box sx={StyledModal} className='modal'>
                             <CloseIcon className='modal_close' onClick={handleClose}/>
                             <Typography className="modal_title" component="h2">
-                                Кошик
+                                Ваш заказ:
                             </Typography>
                             {
                                 basketdata.length > 0 ? basketdata.map((item, i) => (
@@ -88,14 +97,17 @@ const Basket = () => {
                                             <Divider sx={{ mt:2 }}/>
                                         </Box>
                                     )
-                                ) : <Box className="modal_subtitle">Нічого немає</Box>
+                                ) : <Box className="modal_subtitle">Кошик пустий</Box>
                             }                        
                             <Typography className="modal_total">
                                 {"Всього: "}
                                 {basketdata.reduce((sum, currentValue) => sum + +currentValue.price * currentValue.quantity, 0)}
                                 {" грн"}
                             </Typography>
-                            <Button className="buy_button" onClick={() => handleBasket(basketdata)}>Купити</Button>
+                            {/* { basketdata.length > 0 &&  */}
+                                <BasketForm onSubmit={onSubmitForm}/>
+                            {/* } */}
+                            {/* <Button className="buy_button" onClick={() => handleBasket(basketdata)}>Оформити замовлення</Button> */}
                         </Box>
                     </Fade>    
                 </Modal>                

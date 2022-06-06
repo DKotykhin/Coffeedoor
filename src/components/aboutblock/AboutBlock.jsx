@@ -4,7 +4,7 @@ import { Container, Box, ImageList, ImageListItem, Typography } from "@mui/mater
 import { ListItem, ListItemText, List, ListItemIcon } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import DoneIcon from "@mui/icons-material/Done";
-
+import { motion } from "framer-motion"
 import "./aboutblock.scss";
 
 const srcset = (image, width, height, rows = 1, cols = 1) => {
@@ -18,6 +18,16 @@ const srcset = (image, width, height, rows = 1, cols = 1) => {
     };
 }
 
+const listVariants = {
+    visible: i => ({
+        opacity: 1,
+        transition: {
+            delay: i * 0.3,
+        }
+    }),
+    hidden: {opacity: 0}
+};
+
 export default function AboutBlock() {
     const theme = createTheme({
         typography: {
@@ -28,7 +38,7 @@ export default function AboutBlock() {
 
     const benefitsItem = [
         "Швидкий і якісний сервіс",
-        "Висока якість",
+        "Висока якість продукту",
         "Різноманітність кави Speciality",
         "Можливість придбати чай, каву в зернах і аксесуари для приготування кави вдома",
         "Стильний і комфортний дизайн інтер'єру",
@@ -93,16 +103,24 @@ export default function AboutBlock() {
                     </Typography>
                     <Typography className="about_font">Ми - це:</Typography>
                     <List className="list_item">
-                        {benefitsItem.map((item, i) => {
-                            return (
-                                <ListItem key={i} disablePadding>
+                        {benefitsItem.map((item, i) => (
+                            <motion.div 
+                                key={i}
+                                initial='hidden'
+                                whileInView='visible'
+                                variants={listVariants}
+                                custom={i}
+                                viewport={{ amount: 0.3, once: true }}
+                                >
+                                <ListItem disablePadding>
                                     <ListItemIcon>
                                         <DoneIcon />
                                     </ListItemIcon>
                                     <ListItemText>{item}</ListItemText>
                                 </ListItem>
-                            );
-                        })}
+                            </motion.div>
+                            ))
+                        }
                     </List>
                     <Typography className="about_descr about_font">
                         У наших кав'ярнях ви завжди відчуєте атмосферу радості і

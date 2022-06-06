@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
+import { motion, AnimatePresence } from "framer-motion";
 import { Container, Typography, ListItemText, ListItemIcon, ListItem } from "@mui/material";
 import FilterAltOutlinedIcon from '@mui/icons-material/FilterAltOutlined';
 
@@ -25,7 +26,7 @@ const TeaList = () => {
         setTeaList([...teaitems.teaitems])
     }
 
-    const onSelectSort = (sort) => {
+    const onSelectSort = (sort) => {       
         let data = [...teaitems.teaitems];       
         if (sort) {
             data = teaitems.teaitems.filter((item) => (
@@ -79,11 +80,21 @@ const TeaList = () => {
                 navigation={true}                
                 modules={[Navigation, Pagination]}
             >
-                {teaList?.map((item) => (
-                    <SwiperSlide key={item.name} >
-                        <CatalogItem {...item} />
-                    </SwiperSlide>
-                ))}
+                <AnimatePresence initial={false}>
+                    {teaList?.map((item) => (
+                        <SwiperSlide >
+                        <motion.div 
+                            key={item.name}
+                            initial={{opacity: 0}}
+                            animate={{opacity: 1}}
+                            exit={{opacity: 0}}
+                            // transition={{duration: 0.5}}
+                            >
+                                <CatalogItem {...item} />
+                        </motion.div>
+                            </SwiperSlide>
+                    ))}
+                </AnimatePresence>
             </Swiper>            
         </Container>
     )
