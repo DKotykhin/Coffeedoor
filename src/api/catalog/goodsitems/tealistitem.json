@@ -5,7 +5,8 @@
             "weight": "70г",
             "price": "155",
             "description": "Суміш китайських зелених чаїв зі смаком жовтої сливи, абрікосу, жасміну, квітів волошки, червоної та чорної смородини",
-            "img": "tea/Eternal_Life_.JPG",
+            "card_img": "tea/Eternal_Life_.JPG",
+            "list_img": ["tea/Eternal_Life_.JPG", "tea/Eternal_Life.JPG"],
             "tm": "TM SOHO",
             "sort": ["Вид чаю: ", "зелений"]
         },
@@ -15,7 +16,8 @@
             "weight": "70г",
             "price": "155",
             "description": "Етнічна суміш на основі зеленого ройбушу та мате зі шматочками папайї, дині та білих квітів гібіскуса",
-            "img": "tea/Mate_Melon_.JPG",
+            "card_img": "tea/Mate_Melon_.JPG",
+            "list_img": ["tea/Mate_Melon_.JPG", "tea/Mate_Melon.JPG"],
             "tm": "TM SOHO",
             "sort": ["Вид чаю: ", "фруктовий"]
         },
@@ -25,7 +27,8 @@
             "weight": "70г",
             "price": "155",
             "description": "Суміш чорного чаю Ассам та чорного китайського чаю зі смаком карамелі",
-            "img": "tea/English_Caramel_.JPG",
+            "card_img": "tea/English_Caramel_.JPG",
+            "list_img": ["tea/English_Caramel_.JPG", "tea/English_Caramel.JPG"],
             "tm": "TM SOHO",
             "sort": ["Вид чаю: ", "чорний"]
         },
@@ -35,7 +38,8 @@
             "weight": "70г",
             "price": "155",
             "description": "Трав'яна суміш зі смаком гранату, червоної смородини, бамбукового листя, зацукрованої папайї та квітів троянди",
-            "img": "tea/Red_Currant_.JPG",
+            "card_img": "tea/Red_Currant_.JPG",
+            "list_img": ["tea/Red_Currant_.JPG", "tea/Red_Currant.JPG"],
             "tm": "TM SOHO",
             "sort": ["Вид чаю: ", "трав'яний"]
         },
@@ -45,7 +49,8 @@
             "weight": "70г",
             "price": "165",
             "description": "Суміш китайських білих та зелених чаїв зі смаком кислої вишні, кокосових чіпсів та бутонів троянд",
-            "img": "tea/White_Cherry_.JPG",
+            "card_img": "tea/White_Cherry_.JPG",
+            "list_img": ["tea/White_Cherry_.JPG", "tea/White_Cherry.JPG"],
             "tm": "TM SOHO",
             "sort": ["Вид чаю: ", "зелений"]
         },
@@ -55,7 +60,8 @@
             "weight": "70г",
             "price": "185",
             "description": "Етнічна суміш на основі зеленого ройбушу зі смаком айви, абрікосу, шипшини, журавлини, ягід Годжи, ягід обліпихи, ківі, квітів мальви та гранату",
-            "img": "tea/Apricot_Goji_Berry_.JPG",
+            "card_img": "tea/Apricot_Goji_Berry_.JPG",
+            "list_img": ["tea/Apricot_Goji_Berry_.JPG", "tea/Apricot_Goji_Berry.JPG"],
             "tm": "TM SOHO",
             "sort": ["Вид чаю: ", "трав'яний"]
         },
@@ -65,7 +71,8 @@
             "weight": "70г",
             "price": "155",
             "description": "Фруктова суміш зі смаком екзотичних фруктів, бамбукового листя, яблук, моркви, буряку, зацукрованого ананасу, папайї, родзинок та шматочків лимону",
-            "img": "tea/Cold_Drink_Bamboo_.JPG",
+            "card_img": "tea/Cold_Drink_Bamboo_.JPG",
+            "list_img": ["tea/Cold_Drink_Bamboo_.JPG", "tea/Cold_Drink_Bamboo.JPG"],
             "tm": "TM SOHO",
             "sort": ["Вид чаю: ", "фруктовий"]
         },
@@ -75,7 +82,8 @@
             "weight": "70г",
             "price": "155",
             "description": "Китайський зелений чай зі смаком жасміну",
-            "img": "tea/China_Jasmine_.JPG",
+            "card_img": "tea/China_Jasmine_.JPG",
+            "list_img": ["tea/China_Jasmine_.JPG", "tea/China_Jasmine.JPG"],
             "tm": "TM SOHO",
             "sort": ["Вид чаю: ", "зелений"]
         },
@@ -85,7 +93,8 @@
             "weight": "70г",
             "price": "155",
             "description": "Китайський зелений чай зі шматочками папайї, яблука та малини",
-            "img": "tea/Apple_Raspberry_.JPG",
+            "card_img": "tea/Apple_Raspberry_.JPG",
+            "list_img": ["tea/Apple_Raspberry_.JPG", "tea/Apple_Raspberry.JPG"],
             "tm": "TM SOHO",
             "sort": ["Вид чаю: ", "фруктовий"]
         },
@@ -95,7 +104,8 @@
             "weight": "70г",
             "price": "165",
             "description": "Етнічна суміш на основі ройбушу зі смаком грейпфруту, ананасу, яблук, імбиру, червоної смородини та трави лимонник",
-            "img": "tea/Tropical_Sunrise_.JPG",
+            "card_img": "tea/Tropical_Sunrise_.JPG",
+            "list_img": ["tea/Tropical_Sunrise_.JPG", "tea/Tropical_Sunrise.JPG"],
             "tm": "TM SOHO",
             "sort": ["Вид чаю: ", "трав'яний"]
         },
@@ -105,9 +115,76 @@
             "weight": "70г",
             "price": "155",
             "description": "Трав'яна суміш зі смаком лимону, омели, листя берези, гінкго, кропиви, трави лимоннику та звіробою",
-            "img": "tea/Stress_Blocker_.JPG",
+            "card_img": "tea/Stress_Blocker_.JPG",
+            "list_img": ["tea/Stress_Blocker_.JPG", "tea/Stress_Blocker.JPG"],
             "tm": "TM SOHO",
             "sort": ["Вид чаю: ", "трав'яний"]
+        },
+        {
+            "title": "Чай",
+            "name": "Корінь буряку",
+            "weight": "70г",
+            "price": "165",
+            "description": "Фруктова суміш зі смаком буряку, суниці, яблук, родзинок, моркви, ванілі та квітів сонячнику",
+            "card_img": "tea/Beetroot_.JPG",
+            "list_img": ["tea/Beetroot_.JPG", "tea/Beetroot.JPG"],
+            "tm": "TM SOHO",
+            "sort": ["Вид чаю: ", "фруктовий"]
+        },
+        {
+            "title": "Чай",
+            "name": "Вишневий пиріг",
+            "weight": "70г",
+            "price": "155",
+            "description": "Фруктова суміш на основі квітів гібіскуса зі смаком вишні, ягід бузини та родзинок",
+            "card_img": "tea/Cherry_Pie_.JPG",
+            "list_img": ["tea/Cherry_Pie_.JPG", "tea/Cherry_Pie.JPG"],
+            "tm": "TM SOHO",
+            "sort": ["Вид чаю: ", "фруктовий"]
+        },
+        {
+            "title": "Чай",
+            "name": "Китайський Юньнань",
+            "weight": "70г",
+            "price": "155",
+            "description": "Класичний зелений чай з південного китайського району Юньнань",
+            "card_img": "tea/China_Yunnan_.JPG",
+            "list_img": ["tea/China_Yunnan_.JPG", "tea/China_Yunnan.JPG"],
+            "tm": "TM SOHO",
+            "sort": ["Вид чаю: ", "зелений"]
+        },
+        {
+            "title": "Чай",
+            "name": "Надихаючий",
+            "weight": "70г",
+            "price": "185",
+            "description": "Суміш білого китайського чаю Пай Му Тан, зелених китайських чаїв Дарджилінг, Лун Чін, Фог та зеленого чаю з жасміном",
+            "card_img": "tea/Divine_Temple_.JPG",
+            "list_img": ["tea/Divine_Temple_.JPG", "tea/Divine_Temple.JPG"],
+            "tm": "TM SOHO",
+            "sort": ["Вид чаю: ", "зелений"]
+        },
+        {
+            "title": "Чай",
+            "name": "Думур Дулунг",
+            "weight": "70г",
+            "price": "170",
+            "description": "Індійський чорний чай, провінція Ассам, літній збір. Пряний аромат, міцний і терпкий, легкий солодовий смак, темний настій",
+            "card_img": "tea/Doomur_Dulung_.JPG",
+            "list_img": ["tea/Doomur_Dulung_.JPG", "tea/Doomur_Dulung.JPG"],
+            "tm": "TM SOHO",
+            "sort": ["Вид чаю: ", "чорний"]
+        },
+        {
+            "title": "Чай",
+            "name": "Ерл Грей",
+            "weight": "70г",
+            "price": "155",
+            "description": "Суміш чорного чаю з гірських місцевостей о.Цейлон, півдня Індії та Китаю зі смаком натурального бергамоту та квітів жасміну",
+            "card_img": "tea/Doomur_Dulung_.JPG",
+            "list_img": ["tea/Doomur_Dulung_.JPG", "tea/Doomur_Dulung.JPG"],
+            "tm": "TM SOHO",
+            "sort": ["Вид чаю: ", "чорний"]
         }
     ]
 }

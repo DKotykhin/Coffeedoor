@@ -8,7 +8,7 @@ import { itemAddItems } from "../itemlist/ItemListSlice";
 import './stylelist.scss';
 
 const CatalogItem = (props) => {    
-    const { title, name, description, price, weight, img } = props;
+    const { title, name, description, price, weight, card_img } = props;
 
     const dispatch = useDispatch();
     
@@ -17,7 +17,7 @@ const CatalogItem = (props) => {
             <CardMedia
                 component="img"
                 height="345"
-                image={require(`api/catalog/goodsimages/${img}`)}
+                image={require(`api/catalog/goodsimages/${card_img}`)}
                 alt={name}
             />
             <CardContent>

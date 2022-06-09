@@ -5,7 +5,8 @@
             "weight": "250г",
             "price": "229",
             "description": "Горіхово-шоколадні ноти, ромовий бісквіт, солона карамель. Обсмаження: Еспресо. Спосіб обробки зерна: натуральний. 100% арабіка",
-            "img": "coffee/Brazil_Cerrado.JPG",
+            "card_img": "coffee/Brazil_Cerrado.JPG",
+            "list_img": ["coffee/Brazil_Cerrado.JPG"],
             "tm": "TM Coffeedoor"
         },
         {
@@ -14,7 +15,8 @@
             "weight": "250г",
             "price": "249",
             "description": "Виноград, лайм, какао. Обсмаження: Фільтр. Спосіб обробки зерна: митий. 100% арабіка",
-            "img": "coffee/Tanzania_AA_Yetu_Tamu.JPG",
+            "card_img": "coffee/Tanzania_AA_Yetu_Tamu.JPG",
+            "list_img": ["coffee/Tanzania_AA_Yetu_Tamu.JPG"],
             "tm": "TM Coffeedoor"
         },
         {
@@ -23,7 +25,8 @@
             "weight": "250г",
             "price": "229",
             "description": "Горіх, іриска, карамельне яблуко, молочний шоколад. Обсмаження: Еспресо. Спосіб обробки зерна: митий. 100% арабіка",
-            "img": "coffee/Honduras_Beneficio_Santa_Rosa.JPG",
+            "card_img": "coffee/Honduras_Beneficio_Santa_Rosa.JPG",
+            "list_img": ["coffee/Honduras_Beneficio_Santa_Rosa.JPG"],
             "tm": "TM Coffeedoor"
         },
         {
@@ -32,7 +35,8 @@
             "weight": "250г",
             "price": "399",
             "description": "Журавлина, манго, кленовий сироп, шоколад. Обсмаження: Фільтр. Спосіб обробки зерна: натуральний. 100% арабіка",
-            "img": "coffee/Rwanda_Kinini.JPG",
+            "card_img": "coffee/Rwanda_Kinini.JPG",
+            "list_img": ["coffee/Rwanda_Kinini.JPG"],
             "tm": "TM Coffeedoor"
         },
         {
@@ -41,7 +45,8 @@
             "weight": "250г",
             "price": "269",
             "description": "Кісточкові фрукти, горіхові ноти, чорний шоколад. Обсмаження: Еспресо. Спосіб обробки зерна: митий. 100% арабіка",
-            "img": "coffee/Guatemala_Coban.JPG",
+            "card_img": "coffee/Guatemala_Coban.JPG",
+            "list_img": ["coffee/Guatemala_Coban.JPG"],
             "tm": "TM Coffeedoor"
         },
         {
@@ -50,7 +55,8 @@
             "weight": "250г",
             "price": "249",
             "description": "Шоколад, апельсин, кісточкові фрукти. Обсмаження: Фільтр. Спосіб обробки зерна: натуральний. 100% арабіка",
-            "img": "coffee/Colombia_Excelso.JPG",
+            "card_img": "coffee/Colombia_Excelso.JPG",
+            "list_img": ["coffee/Colombia_Excelso.JPG"],
             "tm": "TM Coffeedoor"
         },
         {
@@ -59,7 +65,8 @@
             "weight": "250г",
             "price": "269",
             "description": "Квітково-ягідний аромат з нотами лимонної трави та цитрусів. Обсмаження: Еспресо. Спосіб обробки зерна: митий. 100% арабіка",
-            "img": "coffee/Kenja_Asali.JPG",
+            "card_img": "coffee/Kenja_Asali.JPG",
+            "list_img": ["coffee/Kenja_Asali.JPG"],
             "tm": "TM Coffeedoor"
         }
     ]

@@ -5,7 +5,8 @@
             "weight": "350г",
             "price": "290",
             "description": "Виробник: Сімейна гастрономічна майстерня Artvillage",
-            "img": "jam/Варення_з_горіхів.jpg",
+            "card_img": "jam/Варення_з_горіхів.jpg",
+            "list_img": ["jam/Варення_з_горіхів.jpg"],
             "tm": "TM Artvillage"
         },
         {
@@ -14,7 +15,8 @@
             "weight": "380г",
             "price": "290",
             "description": "Виробник: Сімейна гастрономічна майстерня Artvillage",
-            "img": "jam/Варення_з_шишок.jpg",
+            "card_img": "jam/Варення_з_шишок.jpg",
+            "list_img": ["jam/Варення_з_шишок.jpg"],
             "tm": "TM Artvillage"
         },
         {
@@ -23,7 +25,8 @@
             "weight": "350г",
             "price": "225",
             "description": "Виробник: Сімейна гастрономічна майстерня Artvillage",
-            "img": "jam/Варення_з_троянди.jpg",
+            "card_img": "jam/Варення_з_троянди.jpg",
+            "list_img": ["jam/Варення_з_троянди.jpg"],
             "tm": "TM Artvillage"
         },
         {
@@ -32,7 +35,8 @@
             "weight": "360г",
             "price": "250",
             "description": "Виробник: Сімейна гастрономічна майстерня Artvillage",
-            "img": "jam/Варення_з_цитрусів.jpg",
+            "card_img": "jam/Варення_з_цитрусів.jpg",
+            "list_img": ["jam/Варення_з_цитрусів.jpg"],
             "tm": "TM Artvillage"
         },
         {
@@ -41,7 +45,8 @@
             "weight": "360г",
             "price": "225",
             "description": "Виробник: Сімейна гастрономічна майстерня Artvillage",
-            "img": "jam/Варення_з_бузини.jpg",
+            "card_img": "jam/Варення_з_бузини.jpg",
+            "list_img": ["jam/Варення_з_бузини.jpg"],
             "tm": "TM Artvillage"
         },
         {
@@ -50,7 +55,8 @@
             "weight": "375г",
             "price": "225",
             "description": "Виробник: Сімейна гастрономічна майстерня Artvillage",
-            "img": "jam/Варення_з_айви.jpg",
+            "card_img": "jam/Варення_з_айви.jpg",
+            "list_img": ["jam/Варення_з_айви.jpg"],
             "tm": "TM Artvillage"
         },
         {
@@ -59,7 +65,8 @@
             "weight": "375г",
             "price": "250",
             "description": "Виробник: Сімейна гастрономічна майстерня Artvillage",
-            "img": "jam/Варення_персикове.jpg",
+            "card_img": "jam/Варення_персикове.jpg",
+            "list_img": ["jam/Варення_персикове.jpg"],
             "tm": "TM Artvillage"
         },
         {
@@ -68,7 +75,8 @@
             "weight": "330г",
             "price": "250",
             "description": "Виробник: Сімейна гастрономічна майстерня Artvillage",
-            "img": "jam/Горіхи_в_сиропі.jpg",
+            "card_img": "jam/Горіхи_в_сиропі.jpg",
+            "list_img": ["jam/Горіхи_в_сиропі.jpg"],
             "tm": "TM Artvillage"
         }
     ]
