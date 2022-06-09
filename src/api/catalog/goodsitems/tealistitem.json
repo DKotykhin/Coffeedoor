@@ -8,7 +8,8 @@
             "card_img": "tea/Eternal_Life_.JPG",
             "list_img": ["tea/Eternal_Life_.JPG", "tea/Eternal_Life.JPG"],
             "tm": "TM SOHO",
-            "sort": ["Вид чаю: ", "зелений"]
+            "sort": ["Вид чаю: ", "зелений"],
+            "country": "Німеччина"
         },
         {
             "title": "Чай",
@@ -19,7 +20,8 @@
             "card_img": "tea/Mate_Melon_.JPG",
             "list_img": ["tea/Mate_Melon_.JPG", "tea/Mate_Melon.JPG"],
             "tm": "TM SOHO",
-            "sort": ["Вид чаю: ", "фруктовий"]
+            "sort": ["Вид чаю: ", "фруктовий"],
+            "country": "Німеччина"
         },
         {
             "title": "Чай",
@@ -30,7 +32,8 @@
             "card_img": "tea/English_Caramel_.JPG",
             "list_img": ["tea/English_Caramel_.JPG", "tea/English_Caramel.JPG"],
             "tm": "TM SOHO",
-            "sort": ["Вид чаю: ", "чорний"]
+            "sort": ["Вид чаю: ", "чорний"],
+            "country": "Німеччина"
         },
         {
             "title": "Чай",
@@ -41,7 +44,8 @@
             "card_img": "tea/Red_Currant_.JPG",
             "list_img": ["tea/Red_Currant_.JPG", "tea/Red_Currant.JPG"],
             "tm": "TM SOHO",
-            "sort": ["Вид чаю: ", "трав'яний"]
+            "sort": ["Вид чаю: ", "трав'яний"],
+            "country": "Німеччина"
         },
         {
             "title": "Чай",
@@ -52,7 +56,8 @@
             "card_img": "tea/White_Cherry_.JPG",
             "list_img": ["tea/White_Cherry_.JPG", "tea/White_Cherry.JPG"],
             "tm": "TM SOHO",
-            "sort": ["Вид чаю: ", "зелений"]
+            "sort": ["Вид чаю: ", "зелений"],
+            "country": "Німеччина"
         },
         {
             "title": "Чай",
@@ -63,7 +68,8 @@
             "card_img": "tea/Apricot_Goji_Berry_.JPG",
             "list_img": ["tea/Apricot_Goji_Berry_.JPG", "tea/Apricot_Goji_Berry.JPG"],
             "tm": "TM SOHO",
-            "sort": ["Вид чаю: ", "трав'яний"]
+            "sort": ["Вид чаю: ", "трав'яний"],
+            "country": "Німеччина"
         },
         {
             "title": "Чай",
@@ -74,7 +80,8 @@
             "card_img": "tea/Cold_Drink_Bamboo_.JPG",
             "list_img": ["tea/Cold_Drink_Bamboo_.JPG", "tea/Cold_Drink_Bamboo.JPG"],
             "tm": "TM SOHO",
-            "sort": ["Вид чаю: ", "фруктовий"]
+            "sort": ["Вид чаю: ", "фруктовий"],
+            "country": "Німеччина"
         },
         {
             "title": "Чай",
@@ -85,7 +92,8 @@
             "card_img": "tea/China_Jasmine_.JPG",
             "list_img": ["tea/China_Jasmine_.JPG", "tea/China_Jasmine.JPG"],
             "tm": "TM SOHO",
-            "sort": ["Вид чаю: ", "зелений"]
+            "sort": ["Вид чаю: ", "зелений"],
+            "country": "Німеччина"
         },
         {
             "title": "Чай",
@@ -96,7 +104,8 @@
             "card_img": "tea/Apple_Raspberry_.JPG",
             "list_img": ["tea/Apple_Raspberry_.JPG", "tea/Apple_Raspberry.JPG"],
             "tm": "TM SOHO",
-            "sort": ["Вид чаю: ", "фруктовий"]
+            "sort": ["Вид чаю: ", "фруктовий"],
+            "country": "Німеччина"
         },
         {
             "title": "Чай",
@@ -107,7 +116,8 @@
             "card_img": "tea/Tropical_Sunrise_.JPG",
             "list_img": ["tea/Tropical_Sunrise_.JPG", "tea/Tropical_Sunrise.JPG"],
             "tm": "TM SOHO",
-            "sort": ["Вид чаю: ", "трав'яний"]
+            "sort": ["Вид чаю: ", "трав'яний"],
+            "country": "Німеччина"
         },
         {
             "title": "Чай",
@@ -118,7 +128,8 @@
             "card_img": "tea/Stress_Blocker_.JPG",
             "list_img": ["tea/Stress_Blocker_.JPG", "tea/Stress_Blocker.JPG"],
             "tm": "TM SOHO",
-            "sort": ["Вид чаю: ", "трав'яний"]
+            "sort": ["Вид чаю: ", "трав'яний"],
+            "country": "Німеччина"
         },
         {
             "title": "Чай",
@@ -129,7 +140,8 @@
             "card_img": "tea/Beetroot_.JPG",
             "list_img": ["tea/Beetroot_.JPG", "tea/Beetroot.JPG"],
             "tm": "TM SOHO",
-            "sort": ["Вид чаю: ", "фруктовий"]
+            "sort": ["Вид чаю: ", "фруктовий"],
+            "country": "Німеччина"
         },
         {
             "title": "Чай",
@@ -140,7 +152,8 @@
             "card_img": "tea/Cherry_Pie_.JPG",
             "list_img": ["tea/Cherry_Pie_.JPG", "tea/Cherry_Pie.JPG"],
             "tm": "TM SOHO",
-            "sort": ["Вид чаю: ", "фруктовий"]
+            "sort": ["Вид чаю: ", "фруктовий"],
+            "country": "Німеччина"
         },
         {
             "title": "Чай",
@@ -151,7 +164,8 @@
             "card_img": "tea/China_Yunnan_.JPG",
             "list_img": ["tea/China_Yunnan_.JPG", "tea/China_Yunnan.JPG"],
             "tm": "TM SOHO",
-            "sort": ["Вид чаю: ", "зелений"]
+            "sort": ["Вид чаю: ", "зелений"],
+            "country": "Німеччина"
         },
         {
             "title": "Чай",
@@ -162,7 +176,8 @@
             "card_img": "tea/Divine_Temple_.JPG",
             "list_img": ["tea/Divine_Temple_.JPG", "tea/Divine_Temple.JPG"],
             "tm": "TM SOHO",
-            "sort": ["Вид чаю: ", "зелений"]
+            "sort": ["Вид чаю: ", "зелений"],
+            "country": "Німеччина"
         },
         {
             "title": "Чай",
@@ -173,7 +188,8 @@
             "card_img": "tea/Doomur_Dulung_.JPG",
             "list_img": ["tea/Doomur_Dulung_.JPG", "tea/Doomur_Dulung.JPG"],
             "tm": "TM SOHO",
-            "sort": ["Вид чаю: ", "чорний"]
+            "sort": ["Вид чаю: ", "чорний"],
+            "country": "Німеччина"
         },
         {
             "title": "Чай",
@@ -184,7 +200,8 @@
             "card_img": "tea/Doomur_Dulung_.JPG",
             "list_img": ["tea/Doomur_Dulung_.JPG", "tea/Doomur_Dulung.JPG"],
             "tm": "TM SOHO",
-            "sort": ["Вид чаю: ", "чорний"]
+            "sort": ["Вид чаю: ", "чорний"],
+            "country": "Німеччина"
         }
     ]
 }
