@@ -5,6 +5,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCube, Pagination } from "swiper";
 
 import { Backdrop, Box, Modal, Fade, Button, Typography } from "@mui/material";
+import { ListItem, ListItemText, List, ListItemIcon } from "@mui/material";
+import DoneIcon from "@mui/icons-material/Done";
 import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import CloseIcon from "@mui/icons-material/Close";
@@ -23,7 +25,7 @@ const style = {
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    width: 360,
+    width: 450,
     height: 600, 
     overflowY: "scroll",
     maxWidth: '90%',
@@ -40,7 +42,7 @@ export default function ItemList() {
     const handleClose = () => setOpen(false);
 
     const { itemdata } = useSelector((state) => state.itempage);
-    const { name, title, price, quantity, weight, sort, tm, description, list_img, country, additional_1, additional_2 } = itemdata;
+    const { name, title, price, quantity, weight, sort, tm, description, list_img, country, additional_text_1, additional_text_2, additional_list } = itemdata;
 
     const dispatch = useDispatch();
     const handleDecrement = () => {
@@ -78,7 +80,7 @@ export default function ItemList() {
                             className="item_list_close"
                             onClick={handleClose}
                         />
-                        <Swiper
+                        <Swiper className="swiper"
                             effect={"cube"}
                             grabCursor={true}
                             cubeEffect={{
@@ -124,41 +126,51 @@ export default function ItemList() {
                             </Button>
                         </Typography>
                         {weight &&                        
-                            <Typography>
+                            <Typography variant="body2">
                                 {"Вага: "}
                                 {weight}
                             </Typography>
                         }
                         {sort &&
-                            <Typography>                                
+                            <Typography variant="body2">                                
                                 {sort}
                             </Typography>
                         }
                         {tm &&
-                            <Typography>
+                            <Typography variant="body2">
                                 {"Виробник: "}
                                 {tm}
                             </Typography>                        
                         }
                         {country &&
-                            <Typography>
+                            <Typography variant="body2">
                                 {"Країна: "}
                                 {country}
                             </Typography>                        
                         }
-                        <Typography sx={{ mt: 2 }}>
+                        <Typography sx={{ mt: 2, mb: 2 }} variant="body2">
                             {description}
-                        </Typography>
-                        {additional_1 &&
-                            <Typography sx={{ mt: 2 }}>                                
-                                {additional_1}
-                            </Typography>                        
-                        }
-                        {additional_2 &&
-                            <Typography sx={{ mt: 1 }}>                                
-                                {additional_2}
-                            </Typography>                        
-                        }
+                        </Typography>                        
+                        {additional_text_1?.map((item, i) => (
+                            <Typography key={i} variant="body2">                                
+                                 {item}
+                            </Typography>
+                        ))}
+                        <List className="list">
+                        {additional_list?.map((item, i) => (                            
+                            <ListItem disablePadding key={i}>
+                                <ListItemIcon>
+                                    <DoneIcon />
+                                </ListItemIcon>
+                                <ListItemText>{item}</ListItemText>
+                            </ListItem>
+                        ))}
+                        </List>
+                        {additional_text_2?.map((item, i) => (
+                            <Typography key={i} variant="body2"  sx={{ mt: 2 }} >                                
+                                 {item}
+                            </Typography>
+                        ))}                      
                     </Box>
                 </Fade>
             </Modal>
