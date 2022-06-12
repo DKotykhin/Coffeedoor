@@ -1,8 +1,7 @@
 import img from "./sorry_1.jpg";
 
 const ErrorMessage = () => {
-  return (
-    //<img src={process.env.PUBLIC_URL + '/error.gif'} alt={'error'}/>
+  return (    
     <img
       src={img}
       alt="error"
