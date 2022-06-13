@@ -8,7 +8,7 @@ const initialState = {
 
 export const sendDataToTelegram = createAsyncThunk(
     "basket/sendDataToTelegram",
-    (data) => {                    
+    (data) => {                          
         return SendData(data);        
     }
 );
