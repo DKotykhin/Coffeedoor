@@ -1,44 +1,40 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {    
-    itemdata: {},       
+const initialState = {
+    itemdata: {},
 };
 
 const ItemListSlice = createSlice({
-    name: 'itempage',
+    name: "itempage",
     initialState,
     reducers: {
-        itemAddItems: (state, action) => {                        
-            const newItem = {
+        itemAddItems: (state, action) => {
+            state.itemdata = {
                 ...action.payload,
-                quantity: 1
-            }           
-            state.itemdata = newItem            
-        },        
+                quantity: 1,
+            };
+        },
 
         itemRemoveQuantity: (state) => {
-            const newItem = {               
+            state.itemdata = {
                 ...state.itemdata,
-                quantity: state.itemdata.quantity > 1 ? state.itemdata.quantity - 1 : 1
-            }            
-            state.itemdata = newItem;           
+                quantity:
+                    state.itemdata.quantity > 1
+                        ? state.itemdata.quantity - 1
+                        : 1,
+            };
         },
 
         itemAddQuantity: (state) => {
-            const newItem = {               
+            state.itemdata = {
                 ...state.itemdata,
-                quantity: state.itemdata.quantity + 1
-            }            
-            state.itemdata = newItem;            
-        },        
-    }
+                quantity: state.itemdata.quantity + 1,
+            };
+        },
+    },
 });
 
-const {actions, reducer} = ItemListSlice;
+const { actions, reducer } = ItemListSlice;
 
 export default reducer;
-export const {
-    itemAddItems,    
-    itemAddQuantity,
-    itemRemoveQuantity,           
-} = actions;
+export const { itemAddItems, itemAddQuantity, itemRemoveQuantity } = actions;

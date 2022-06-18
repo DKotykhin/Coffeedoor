@@ -4,13 +4,13 @@
             "name": "Kalita KH-5",
             "price": "2290",
             "description": "Ручна вінтажна кавомолка Kalita KH-5. Країна виробник: Японія",
-            "card_img": "mills/Kalita_KH-5_1.jpg",
+            "card_img": "mills/Kalita_KH-5_1.webp",
             "list_img": [
-                "mills/Kalita_KH-5_1.jpg",
-                "mills/Kalita_KH-5_2.jpg",
-                "mills/Kalita_KH-5_3.jpg",
-                "mills/Kalita_KH-5_4.jpg",
-                "mills/Kalita_KH-5_5.jpg"
+                "mills/Kalita_KH-5_1.webp",
+                "mills/Kalita_KH-5_2.webp",
+                "mills/Kalita_KH-5_3.webp",
+                "mills/Kalita_KH-5_4.webp",
+                "mills/Kalita_KH-5_5.webp"
             ],
             "tm": "TM Kalita",
             "order": "true",
@@ -36,11 +36,11 @@
             "name": "HARIO Скіртон ПЛЮС",
             "price": "1499",
             "description": "Японська професійна кавомолка HARIO Скіртон ПЛЮС. Оновлена ​​версія",
-            "card_img": "mills/Skirton plus_1.jpg",
+            "card_img": "mills/Skirton plus_1.webp",
             "list_img": [
-                "mills/Skirton plus_1.jpg",
-                "mills/Skirton plus_2.jpg",
-                "mills/Skirton plus_3.jpg"
+                "mills/Skirton plus_1.webp",
+                "mills/Skirton plus_2.webp",
+                "mills/Skirton plus_3.webp"
             ],
             "tm": "TM Hario",
             "sort": "Колір: чорний",
@@ -66,13 +66,13 @@
             "name": "HARIO Mini Mill Slim+",
             "price": "1299",
             "description": "Кавомолка HARIO Mini Mill Slim+ с керамічними жерновами та регулюванням помола",
-            "card_img": "mills/Mini_Mill_Slim+_1.jpg",
+            "card_img": "mills/Mini_Mill_Slim+_1.webp",
             "list_img": [
-                "mills/Mini_Mill_Slim+_1.jpg",
-                "mills/Mini_Mill_Slim+_2.jpg",
-                "mills/Mini_Mill_Slim+_3.jpg",
-                "mills/Mini_Mill_Slim+_4.jpg",
-                "mills/Mini_Mill_Slim+_5.jpg"
+                "mills/Mini_Mill_Slim+_1.webp",
+                "mills/Mini_Mill_Slim+_2.webp",
+                "mills/Mini_Mill_Slim+_3.webp",
+                "mills/Mini_Mill_Slim+_4.webp",
+                "mills/Mini_Mill_Slim+_5.webp"
             ],
             "tm": "TM Hario",
             "sort": "Колір: прозорий",
@@ -95,13 +95,13 @@
             "name": "HARIO Mini Mill Slim Pro",
             "price": "1899",
             "description": "Кавомолка HARIO Mini Mill Slim Pro з керамічними жерновами та регулюванням помолу",
-            "card_img": "mills/Mini_Mill_Slim_Pro_2.jpg",
+            "card_img": "mills/Mini_Mill_Slim_Pro_2.webp",
             "list_img": [
-                "mills/Mini_Mill_Slim_Pro_2.jpg",
-                "mills/Mini_Mill_Slim_Pro_3.jpg",
-                "mills/Mini_Mill_Slim_Pro_4.jpg",
-                "mills/Mini_Mill_Slim_Pro_5.jpg",
-                "mills/Mini_Mill_Slim_Pro_6.jpg"
+                "mills/Mini_Mill_Slim_Pro_2.webp",
+                "mills/Mini_Mill_Slim_Pro_3.webp",
+                "mills/Mini_Mill_Slim_Pro_4.webp",
+                "mills/Mini_Mill_Slim_Pro_5.webp",
+                "mills/Mini_Mill_Slim_Pro_6.webp"
             ],
             "tm": "TM Hario",
             "sort": "Колір: сірий",

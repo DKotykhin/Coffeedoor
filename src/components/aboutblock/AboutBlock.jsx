@@ -4,7 +4,8 @@ import { Container, Box, ImageList, ImageListItem, Typography } from "@mui/mater
 import { ListItem, ListItemText, List, ListItemIcon } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import DoneIcon from "@mui/icons-material/Done";
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
+
 import "./aboutblock.scss";
 
 const srcset = (image, width, height, rows = 1, cols = 1) => {
@@ -137,69 +138,69 @@ export default function AboutBlock() {
 
 const itemData = [
     {
-        img: require("../../images/about/Coffeedoor_10.JPG"),
+        img: require("../../images/about/Coffeedoor_10.webp"),
         title: "Coffee",
         size: true,
     },
     {
-        img: require("../../images/about/Coffeedoor_11.JPG"),
+        img: require("../../images/about/Coffeedoor_11.webp"),
         title: "Coffee",
     },
     {
-        img: require("../../images/about/Coffeedoor_12.JPG"),
+        img: require("../../images/about/Coffeedoor_12.webp"),
         title: "Coffee",
     },
     {
-        img: require("../../images/about/Coffeedoor_13.JPG"),
+        img: require("../../images/about/Coffeedoor_13.webp"),
         title: "Coffee",
         size: true,
     },
     {
-        img: require("../../images/about/Coffeedoor_14.JPG"),
+        img: require("../../images/about/Coffeedoor_14.webp"),
         title: "Coffee",
     },
     {
-        img: require("../../images/about/Coffeedoor_15.JPG"),
+        img: require("../../images/about/Coffeedoor_15.webp"),
         title: "Coffee",
     },
     {
-        img: require("../../images/about/Coffeedoor_16.JPG"),
+        img: require("../../images/about/Coffeedoor_16.webp"),
         title: "Coffee",
     },
     {
-        img: require("../../images/about/Coffeedoor_17.JPG"),
+        img: require("../../images/about/Coffeedoor_17.webp"),
         title: "Coffee",
     },
     {
-        img: require("../../images/about/Coffeedoor_18.JPG"),
+        img: require("../../images/about/Coffeedoor_18.webp"),
         title: "Coffee",
     },
     {
-        img: require("../../images/about/Coffeedoor_19.JPG"),
+        img: require("../../images/about/Coffeedoor_19.webp"),
         title: "Coffee",
     },
     {
-        img: require("../../images/about/Coffeedoor_20.JPG"),
+        img: require("../../images/about/Coffeedoor_20.webp"),
         title: "Coffee",
     },
     {
-        img: require("../../images/about/Coffeedoor_21.JPG"),
+        img: require("../../images/about/Coffeedoor_21.webp"),
         title: "Coffee",
     },
     {
-        img: require("../../images/about/Coffeedoor_22.JPG"),
+        img: require("../../images/about/Coffeedoor_22.webp"),
         title: "Coffee",
     },
     {
-        img: require("../../images/about/Coffeedoor_23.JPG"),
+        img: require("../../images/about/Coffeedoor_23.webp"),
         title: "Coffee table",
     },
     {
-        img: require("../../images/about/Coffeedoor_24.JPG"),
+        img: require("../../images/about/Coffeedoor_24.webp"),
         title: "Coffee table",
     },
     {
-        img: require("../../images/about/Coffeedoor_25.JPG"),
+        img: require("../../images/about/Coffeedoor_25.webp"),
         title: "Coffee table",
     },
 ];
