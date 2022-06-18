@@ -48,8 +48,13 @@
         &_desc {
             min-height: 80px;
             @media (max-width: 600px) {
-                font-size: 13px;
                 min-height: 100px;
+            }
+            p {
+                font-size: 14px;
+                @media (max-width: 600px) {
+                    font-size: 13px;
+                }
             }
         }
     }

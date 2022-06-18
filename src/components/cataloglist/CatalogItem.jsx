@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 
-import { Typography, Button } from "@mui/material";
+import { Typography, Button, Box } from "@mui/material";
 import { Card, CardActions, CardContent, CardMedia } from '@mui/material';
 import { basketAddItems } from "../basket/BasketListSlice";
 import { itemAddItems } from "../itemlist/ItemListSlice";
@@ -8,7 +8,7 @@ import { itemAddItems } from "../itemlist/ItemListSlice";
 import './stylelist.scss';
 
 const CatalogItem = (props) => {    
-    const { title, name, description, price, weight, card_img } = props;
+    const { title, name, description, price, weight, card_img, order } = props;
 
     const dispatch = useDispatch();
     
@@ -27,9 +27,16 @@ const CatalogItem = (props) => {
                 <Typography className="catalog_list_card_price">
                    {price}{' грн'}
                 </Typography>
-                <Typography className="catalog_list_card_desc" variant="body2" color="text.secondary">
-                    {description}
-                </Typography>
+                <Box className="catalog_list_card_desc">
+                    {order &&
+                        <Typography color="#ff0000" sx={{mb:2}}>
+                            {'під замовлення'}
+                        </Typography>
+                    }
+                    <Typography color="text.secondary">
+                        {description}
+                    </Typography>
+                </Box>
                 { weight && 
                     <Typography variant="body2" color="text.secondary">
                         {'Вага: '}{weight}

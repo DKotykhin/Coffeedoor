@@ -17,63 +17,31 @@ const CoffeeList = () => {
             </Typography>
             <Typography className="catalog_list_subtitle">
                 Свіжообсмажена кава ТМ CoffeeDOOR
-            </Typography>                       
+            </Typography>
             <Swiper
-                className="slider"                
+                className="slider"
                 slidesPerView={1.3}
-                spaceBetween={10}                
-                breakpoints={{                 
-                    "850": {
-                        slidesPerView: 2                        
+                spaceBetween={10}
+                breakpoints={{
+                    850: {
+                        slidesPerView: 2,
                     },
-                    "1200": {
-                        slidesPerView: 3                        
-                    }                    
+                    1200: {
+                        slidesPerView: 3,
+                    },
                 }}
                 //rewind={true}
-                navigation={true}                
+                navigation={true}
                 modules={[Navigation]}
             >
                 {coffeeitems.coffeeitems.map((item) => (
-                    <SwiperSlide key={item.name} >
+                    <SwiperSlide key={item.name}>
                         <CatalogItem {...item} />
                     </SwiperSlide>
                 ))}
-            </Swiper>            
+            </Swiper>
         </Container>
     );
 };
 
 export default CoffeeList;
-
-
-
-
-
-// import { Container, Typography, Box } from "@mui/material";
-
-// import CatalogItem from "../CatalogItem";
-// import  coffeeitems from '../../../api/catalog/goodsitems/coffeelistitem.json';
-
-// import '../stylelist.scss';
-
-// const CoffeeList = () => {      
-
-//     return (
-//         <Container id='coffee_list' className="catalog_list" maxWidth="lg">
-//             <Typography className="catalog_list_title">КАВА В ЗЕРНАХ</Typography>
-//             <Typography className="catalog_list_subtitle">
-//                 Свіжообсмажена кава ТМ CoffeeDOOR
-//             </Typography>
-//             <Box className="catalog_list_box">
-//             {
-//                 coffeeitems.coffeeitems.map((item) => (
-//                     <CatalogItem key={item.name} {...item}/>
-//                 ))
-//             }
-//             </Box>            
-//         </Container>
-//     )
-// }
-
-// export default CoffeeList;
