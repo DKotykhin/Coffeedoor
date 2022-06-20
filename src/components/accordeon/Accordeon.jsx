@@ -83,7 +83,7 @@ export default function Accordeon() {
                                     {item.description}
                                 </Typography>
                                 <Typography sx={{ fontSize: 18 }}>
-                                    {item.price}
+                                    {item.price}{" грн"}
                                 </Typography>
                             </Box>
                         ))}
