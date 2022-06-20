@@ -16,20 +16,13 @@ const ItemListSlice = createSlice({
         },
 
         itemRemoveQuantity: (state) => {
-            state.itemdata = {
-                ...state.itemdata,
-                quantity:
-                    state.itemdata.quantity > 1
-                        ? state.itemdata.quantity - 1
-                        : 1,
-            };
+            state.itemdata.quantity > 1
+                ? (state.itemdata.quantity -= 1)
+                : (state.itemdata.quantity = 1);
         },
 
         itemAddQuantity: (state) => {
-            state.itemdata = {
-                ...state.itemdata,
-                quantity: state.itemdata.quantity + 1,
-            };
+            state.itemdata.quantity += 1;
         },
     },
 });

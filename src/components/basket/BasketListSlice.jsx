@@ -8,8 +8,8 @@ const initialState = {
 
 export const sendDataToTelegram = createAsyncThunk(
     "basket/sendDataToTelegram",
-    (data) => {                          
-        return SendData(data);        
+    (data) => {
+        return SendData(data);
     }
 );
 
@@ -71,38 +71,28 @@ const basketdataListSlice = createSlice({
         },
 
         basketRemoveQuantity: (state, action) => {
-            const newOrder = state.basketdata.map((item) => {
+            state.basketdata.forEach((item) => {
                 if (item.name === action.payload) {
-                    return {
-                        ...item,
-                        quantity: item.quantity > 0 ? item.quantity - 1 : 0,
-                    };
-                } else {
-                    return item;
+                    item.quantity > 1
+                        ? (item.quantity -= 1)
+                        : (item.quantity = 1);
                 }
             });
-            state.basketdata = newOrder;
         },
 
         basketAddQuantity: (state, action) => {
-            const newOrder = state.basketdata.map((item) => {
+            state.basketdata.forEach((item) => {
                 if (item.name === action.payload) {
-                    return {
-                        ...item,
-                        quantity: item.quantity + 1,
-                    };
-                } else {
-                    return item;
+                    item.quantity += 1;
                 }
             });
-            state.basketdata = newOrder;
-        }
+        },
     },
-    extraReducers: {        
+    extraReducers: {
         [sendDataToTelegram.fulfilled]: (state) => {
             state.basketdata = [];
         },
-        // [sendDataToTelegram.rejected]: (state) => {           
+        // [sendDataToTelegram.rejected]: (state) => {
         //     console.log("something get wrong");
         // },
     },
