@@ -82,7 +82,7 @@ const Basket = () => {
                             onClick={handleClose}
                         />
                         <Typography className="modal_title" component="h2">
-                            Ваш заказ:
+                            Ваше замовлення:
                         </Typography>
                         {basketdata.length > 0 ? (
                             basketdata.map((item, i) => (
