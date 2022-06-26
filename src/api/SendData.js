@@ -11,7 +11,7 @@ export const SendData = (data) => {
             message += `<b>Відправник: </b>${item.name}\n`;
             message += `<b>Телефон: </b>${item.phone}\n`;
             message += `<b>Спосіб доставки: </b>${item.delivery}\n`;
-            message += `<b>Коментар: </b>${item.text}\n`;
+            message += `<b>Коментар: </b>${item.text ? item.text : ''}\n`;
             message += `<b>Заказ: </b>\n`;
         }
         if ('title' in item) {
