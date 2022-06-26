@@ -3,8 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-    Container,
-    Typography,
+    Container,    
     ListItemText,
     ListItemIcon,
     ListItem,
@@ -14,6 +13,7 @@ import FilterAltOutlinedIcon from "@mui/icons-material/FilterAltOutlined";
 import CatalogItem from "../CatalogItem";
 import teaitems from "api/catalog/goodsitems/tealistitem.json";
 import SelectFilterItems from "components/filters/SelectFilterItems";
+import ListHeader from "../ListHeader";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -41,14 +41,12 @@ const TeaList = () => {
     };
 
     return (
-        <Container id="tea_list" className="catalog_list" maxWidth="xl">
-            <Typography className="catalog_list_title">листовий чай</Typography>
-            <Typography className="catalog_list_subtitle">
-                Натуральні чорні, зелені, трав'яні та фруктові чаї німецької
+        <Container id="tea_list" className="catalog_list" maxWidth="xl">            
+            <ListHeader 
+                title='листовий чай' 
+                subtitle="Натуральні чорні, зелені, трав'яні та фруктові чаї німецької
                 торгівельної марки SOHO. Виготовлені без додавання барвників,
-                штучних ароматизаторів, консервантів
-            </Typography>
-
+                штучних ароматизаторів, консервантів" />
             <ListItem>
                 <ListItemIcon>
                     <FilterAltOutlinedIcon />

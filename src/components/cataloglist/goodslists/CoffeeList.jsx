@@ -1,9 +1,10 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
-import { Container, Typography } from "@mui/material";
+import { Container } from "@mui/material";
 
 import CatalogItem from "../CatalogItem";
 import coffeeitems from "api/catalog/goodsitems/coffeelistitem.json";
+import ListHeader from "../ListHeader";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -11,13 +12,10 @@ import "../stylelist.scss";
 
 const CoffeeList = () => {
     return (
-        <Container id="coffee_list" className="catalog_list" maxWidth="xl">
-            <Typography className="catalog_list_title">
-                КАВА В ЗЕРНАХ
-            </Typography>
-            <Typography className="catalog_list_subtitle">
-                Свіжообсмажена кава ТМ CoffeeDOOR
-            </Typography>
+        <Container id="coffee_list" className="catalog_list" maxWidth="xl">            
+            <ListHeader 
+                title='КАВА В ЗЕРНАХ' 
+                subtitle='Свіжообсмажена кава ТМ CoffeeDOOR' />
             <Swiper
                 className="slider"
                 slidesPerView={1.3}

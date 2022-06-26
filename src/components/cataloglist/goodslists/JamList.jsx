@@ -1,9 +1,10 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
-import { Container, Typography } from "@mui/material";
+import { Container } from "@mui/material";
 
 import CatalogItem from "../CatalogItem";
 import  jamitems from 'api/catalog/goodsitems/jamlistitem.json';
+import ListHeader from "../ListHeader";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -12,11 +13,10 @@ import "../stylelist.scss";
 const JamList = () => {      
 
     return (
-        <Container id='jam_list' className="catalog_list" maxWidth="xl">
-            <Typography className="catalog_list_title">ВАРЕННЯ ARTVILLAGE</Typography>
-            <Typography className="catalog_list_subtitle">
-                Виготовлено виключно з натуральної сировини
-            </Typography>
+        <Container id='jam_list' className="catalog_list" maxWidth="xl">            
+            <ListHeader 
+                title='ВАРЕННЯ ARTVILLAGE' 
+                subtitle='Виготовлено виключно з натуральної сировини' />
             <Swiper
                 className="slider"
                 slidesPerView={1.3}
