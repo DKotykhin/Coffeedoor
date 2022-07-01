@@ -13,10 +13,10 @@ const TitleBlock = () => {
                     <img src={img} alt="logo" />
                 </Link>
                 <Typography className="titleblock_name" component="h2">
-                    Меню кав'ярні
+                    {`Меню кав'ярні`}
                 </Typography>
                 <Typography className="titleblock_desc" component="h3">
-                    ми пропонуємо напої з свіжообсмаженої кави
+                    {`ми пропонуємо напої з свіжообсмаженої кави`}
                 </Typography>
             </Container>
         </>

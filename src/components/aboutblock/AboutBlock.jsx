@@ -48,21 +48,7 @@ export default function AboutBlock() {
 
     return (
         <Container id="about_block" maxWidth="lg">
-            <Typography className="about_title">ПРО НАС</Typography>
-            {/* <Box sx={{ height: 800, overflowY: "scroll" }}>
-                <ImageList variant="masonry" cols={2} gap={8}>
-                    {itemData.map((item) => (
-                        <ImageListItem key={item.img}>
-                            <img
-                                src={`${item.img}?w=348&fit=crop&auto=format`}
-                                srcSet={`${item.img}?w=348&fit=crop&auto=format&dpr=2 2x`}
-                                alt={item.title}
-                                loading="lazy"
-                            />
-                        </ImageListItem>
-                    ))}
-                </ImageList>
-            </Box> */}
+            <Typography className="about_title">{'ПРО НАС'}</Typography>            
             <ImageList
                 sx={{
                     height: 800,
@@ -76,7 +62,7 @@ export default function AboutBlock() {
                     return (
                         <ImageListItem key={item.img} cols={cols} rows={rows}>
                             <img
-                                {...srcset(item.img, 250, 200, rows, cols)}
+                                {...srcset(require(`images/about/${item.img}`), 250, 200, rows, cols)}
                                 alt={item.title}
                                 loading="lazy"
                             />
@@ -86,11 +72,11 @@ export default function AboutBlock() {
             </ImageList>
             <Box maxWidth="md" className="about_box">
                 <Typography className="about_slogan">
-                    Our coffee – Everything matters
+                    {'Our coffee – Everything matters'}
                 </Typography>
                 <ThemeProvider theme={theme}>
                     <Typography className="about_descr about_font">
-                        Особливість кав'ярень CoffeeDOOR Brewbar & Coffeeshop в
+                        {`Особливість кав'ярень CoffeeDOOR Brewbar & Coffeeshop в
                         цілісному підході, де все має значення. При приготуванні
                         кави кожна деталь має значення - про це свідчить слоган
                         кав'ярні, який переплітається з однією з основних
@@ -100,9 +86,9 @@ export default function AboutBlock() {
                         бізнес-процесів, в дистрибуції кращого кавового
                         обладнання, обсмажуванні кавового зерна рівня
                         Speciality, в унікальній системі навчання бариста і
-                        системі контролю якості.
+                        системі контролю якості.`}
                     </Typography>
-                    <Typography className="about_font">Ми - це:</Typography>
+                    <Typography className="about_font">{'Ми - це:'}</Typography>
                     <List className="list_item">
                         {benefitsItem.map((item, i) => (
                             <motion.div 
@@ -124,10 +110,10 @@ export default function AboutBlock() {
                         }
                     </List>
                     <Typography className="about_descr about_font">
-                        У наших кав'ярнях ви завжди відчуєте атмосферу радості і
+                        {`У наших кав'ярнях ви завжди відчуєте атмосферу радості і
                         доброти. Ми цінуємо смак і час наших гостей. Ми знаємо,
                         як звуть постійного гостя, його звички і улюблений
-                        напій.
+                        напій.`}
                     </Typography>
                     <br />
                 </ThemeProvider>               
@@ -138,69 +124,69 @@ export default function AboutBlock() {
 
 const itemData = [
     {
-        img: require("images/about/Coffeedoor_10.webp"),
+        img: "Coffeedoor_10.webp",
         title: "Coffee",
         size: true,
     },
     {
-        img: require("images/about/Coffeedoor_11.webp"),
+        img: "Coffeedoor_11.webp",
         title: "Coffee",
     },
     {
-        img: require("images/about/Coffeedoor_12.webp"),
+        img: "Coffeedoor_12.webp",
         title: "Coffee",
     },
     {
-        img: require("images/about/Coffeedoor_13.webp"),
+        img: "Coffeedoor_13.webp",
         title: "Coffee",
         size: true,
     },
     {
-        img: require("images/about/Coffeedoor_14.webp"),
+        img: "Coffeedoor_14.webp",
         title: "Coffee",
     },
     {
-        img: require("images/about/Coffeedoor_15.webp"),
+        img: "Coffeedoor_15.webp",
         title: "Coffee",
     },
     {
-        img: require("images/about/Coffeedoor_16.webp"),
+        img: "Coffeedoor_16.webp",
         title: "Coffee",
     },
     {
-        img: require("images/about/Coffeedoor_17.webp"),
+        img: "Coffeedoor_17.webp",
         title: "Coffee",
     },
     {
-        img: require("images/about/Coffeedoor_18.webp"),
+        img: "Coffeedoor_18.webp",
         title: "Coffee",
     },
     {
-        img: require("images/about/Coffeedoor_19.webp"),
+        img: "Coffeedoor_19.webp",
         title: "Coffee",
     },
     {
-        img: require("images/about/Coffeedoor_20.webp"),
+        img: "Coffeedoor_20.webp",
         title: "Coffee",
     },
     {
-        img: require("images/about/Coffeedoor_21.webp"),
+        img: "Coffeedoor_21.webp",
         title: "Coffee",
     },
     {
-        img: require("images/about/Coffeedoor_22.webp"),
+        img: "Coffeedoor_22.webp",
         title: "Coffee",
     },
     {
-        img: require("images/about/Coffeedoor_23.webp"),
+        img: "Coffeedoor_23.webp",
         title: "Coffee table",
     },
     {
-        img: require("images/about/Coffeedoor_24.webp"),
+        img: "Coffeedoor_24.webp",
         title: "Coffee table",
     },
     {
-        img: require("images/about/Coffeedoor_25.webp"),
+        img: "Coffeedoor_25.webp",
         title: "Coffee table",
     },
 ];
