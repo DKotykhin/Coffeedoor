@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
 import { motion, AnimatePresence } from "framer-motion";
@@ -21,11 +21,7 @@ import "../stylelist.scss";
 
 const TeaList = () => {
     const [showSelector, setShowSelector] = useState(false);
-    const [teaList, setTeaList] = useState([]);
-
-    useEffect(() => {
-        onSelectSort();
-    }, []);
+    const [teaList, setTeaList] = useState([...teaitems.teaitems]);
 
     const filtersOpen = () => {
         setShowSelector(!showSelector);
@@ -58,16 +54,11 @@ const TeaList = () => {
                     Фільтри
                 </ListItemText>
             </ListItem>
-            {showSelector && (
-                <>
-                    <SelectFilterItems
-                        onSelect={onSelectSort}
-                        quantity={teaList.length}
-                    />
-                    {/* <Typography className="catalog_list_select">
-                        {'вибрано: '}{teaList.length}
-                    </Typography> */}
-                </>
+            {showSelector && (               
+                <SelectFilterItems
+                    onSelect={onSelectSort}
+                    quantity={teaList.length}
+                />              
             )}
             <Swiper
                 className="slider"
