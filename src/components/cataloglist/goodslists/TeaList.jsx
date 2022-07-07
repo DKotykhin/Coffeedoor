@@ -2,12 +2,7 @@ import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-    Container,    
-    ListItemText,
-    ListItemIcon,
-    ListItem,
-} from "@mui/material";
+import { Container, ListItemText, ListItemIcon, ListItem } from "@mui/material";
 import FilterAltOutlinedIcon from "@mui/icons-material/FilterAltOutlined";
 
 import CatalogItem from "../CatalogItem";
@@ -37,12 +32,13 @@ const TeaList = () => {
     };
 
     return (
-        <Container id="tea_list" className="catalog_list" maxWidth="xl">            
-            <ListHeader 
-                title='листовий чай' 
+        <Container id="tea_list" className="catalog_list" maxWidth="xl">
+            <ListHeader
+                title="листовий чай"
                 subtitle="Натуральні чорні, зелені, трав'яні та фруктові чаї німецької
                 торгівельної марки SOHO. Виготовлені без додавання барвників,
-                штучних ароматизаторів, консервантів" />
+                штучних ароматизаторів, консервантів"
+            />
             <ListItem>
                 <ListItemIcon>
                     <FilterAltOutlinedIcon />
@@ -54,11 +50,11 @@ const TeaList = () => {
                     Фільтри
                 </ListItemText>
             </ListItem>
-            {showSelector && (               
+            {showSelector && (
                 <SelectFilterItems
                     onSelect={onSelectSort}
                     quantity={teaList.length}
-                />              
+                />
             )}
             <Swiper
                 className="slider"
@@ -73,6 +69,7 @@ const TeaList = () => {
                     },
                 }}
                 // rewind={true}
+                threshold={20}
                 navigation={true}
                 modules={[Navigation, Pagination]}
             >

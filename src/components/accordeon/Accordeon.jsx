@@ -8,8 +8,9 @@ import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandCircleDown";
 
-import "./accordeon.scss";
 import MenuList from "api/menu/menuItems.json";
+
+import "./accordeon.scss";
 
 const Accordion = styled((props) => (
     <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -48,10 +49,10 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 }));
 
 export default function Accordeon() {
-    const [expanded, setExpanded] = React.useState(false);
+    const [expanded, setExpanded] = React.useState("");
 
     const handleChange = (panel) => (event, isExpanded) => {
-        setExpanded(isExpanded ? panel : false);
+        setExpanded(isExpanded ? panel : "");
     };
 
     return (
@@ -83,7 +84,8 @@ export default function Accordeon() {
                                     {item.description}
                                 </Typography>
                                 <Typography sx={{ fontSize: 18 }}>
-                                    {item.price}{" грн"}
+                                    {item.price}
+                                    {" грн"}
                                 </Typography>
                             </Box>
                         ))}

@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import {
     Container,
     Typography,
@@ -9,18 +10,23 @@ import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 
+import "../../utils/i18next";
 import "./infoblock.scss";
 
 const InfoBlock = () => {
+    const { t } = useTranslation();
+
     return (
         <Container maxWidth="md" className="infoblock">
             <Typography className="infoblock_title" component="h1">
-                {`Кав'ярня та магазин свіжообсмаженої кави CoffeeDoor`}
+                {/* {`Кав'ярня та магазин свіжообсмаженої кави CoffeeDoor`} */}
+                {t("infoblock.title")}
             </Typography>
             <Typography className="infoblock_subtitle" component="h2">
-                {`CoffeeDOOR – це кавовий бренд, який по'єднує в собі
+                {/* {`CoffeeDOOR – це кавовий бренд, який по'єднує в собі
                 свіжообсмажену каву рівня Speciality, кращі кавові технології,
-                стильний дизайнерський інтер'єр, швидкий і дружній сервіс`}
+                стильний дизайнерський інтер'єр, швидкий і дружній сервіс`} */}
+                {t("infoblock.subtitle")}
             </Typography>
             <ListItem>
                 <AccessTimeIcon className="infoblock_icon" />
@@ -59,9 +65,7 @@ const InfoBlock = () => {
                     <Typography className="infoblock_item_2">
                         {`м.Харків, вул. Пушкінська, 50/52`}
                     </Typography>
-                    <Link className="infoblock_item_3"                        
-                        href="tel:80997609883"
-                    >
+                    <Link className="infoblock_item_3" href="tel:80997609883">
                         {`Телефон: +38 099 760 98 83`}
                     </Link>
                 </ListItemText>

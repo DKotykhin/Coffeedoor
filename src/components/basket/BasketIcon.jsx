@@ -9,7 +9,7 @@ import "./basket.scss";
 
 // const StyledBadge = styled(Badge)(() => ({
 //     "& .MuiBadge-badge": {
-//         color: "#00a1b6",        
+//         color: "#00a1b6",
 //         top: 10,
 //         border: `2px solid #00a1b6`,
 //         padding: "0 3px",
@@ -18,28 +18,31 @@ import "./basket.scss";
 
 const StyledBadge = styled(Badge)`
     & .MuiBadge-badge {
-        color: #00a1b6;        
-        top: 15px;        
+        color: #00a1b6;
+        top: 15px;
         border: 2px solid #00a1b6;
         padding: 0 3px;
     }
 `;
 
-const BasketIcon = ({handleOpen}) => {
-
-    const {basketdata} = useSelector((state) => state.basket);
-    const totalQuantity = basketdata.reduce((sum, currentValue) => sum + currentValue.quantity, 0);
+const BasketIcon = ({ handleOpen }) => {
+    const { basketdata } = useSelector((state) => state.basket);
+    const totalQuantity = basketdata.reduce(
+        (sum, currentValue) => sum + currentValue.quantity,
+        0
+    );
 
     return (
         <>
-            {basketdata.length > 0 && 
+            {basketdata.length > 0 && (
                 <Box className="basket" onClick={handleOpen}>
                     <StyledBadge badgeContent={totalQuantity}>
                         <ShoppingBasketOutlinedIcon className="basket_icon" />
                     </StyledBadge>
-                </Box>}
+                </Box>
+            )}
         </>
-    )
-}
+    );
+};
 
 export default BasketIcon;

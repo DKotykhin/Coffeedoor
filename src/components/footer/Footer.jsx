@@ -1,40 +1,43 @@
-import { Box } from '@mui/system';
-import { Typography, Link } from '@mui/material';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TelegramIcon from '@mui/icons-material/Telegram';
+import { Box } from "@mui/system";
+import { Typography, Link } from "@mui/material";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import TelegramIcon from "@mui/icons-material/Telegram";
 
-import './footer.scss';
+import "./footer.scss";
 
 const Footer = () => {
-    return (        
-        <div id='footer_block'>
+    return (
+        <div id="footer_block">
             <Box>
                 <Link href="https://www.facebook.com/Coffeedoor.Kharkov">
-                    <FacebookIcon className='footer_icon'/>
+                    <FacebookIcon className="footer_icon" />
                 </Link>
                 <Link href="https://www.instagram.com/coffeedoor.kh/">
-                    <InstagramIcon className='footer_icon'/>
+                    <InstagramIcon className="footer_icon" />
                 </Link>
                 <Link href="https://t.me/Dmytro_Kotykhin">
-                    <TelegramIcon className='footer_icon'/>
-                </Link>                
+                    <TelegramIcon className="footer_icon" />
+                </Link>
             </Box>
-            <Typography className='footer_item'>
+            <Typography className="footer_item">
                 м.Харків, вул. Пушкінська, 50/52
             </Typography>
-            <Box className='footer_item'>
-                <Link sx={{ color: '#fff' }} href="tel:80997609883">
+            <Box className="footer_item">
+                <Link sx={{ color: "#fff" }} href="tel:80997609883">
                     Телефон: +38 099 760 98 83
                 </Link>
             </Box>
-            <Box className='footer_item'>
-                <Link sx={{ color: '#fff' }} href="mailto:coffeedoor.kh@gmail.com">
+            <Box className="footer_item">
+                <Link
+                    sx={{ color: "#fff" }}
+                    href="mailto:coffeedoor.kh@gmail.com"
+                >
                     e-mail: coffeedoor.kh@gmail.com
                 </Link>
-            </Box>            
-        </div>        
-    )
-}
+            </Box>
+        </div>
+    );
+};
 
 export default Footer;

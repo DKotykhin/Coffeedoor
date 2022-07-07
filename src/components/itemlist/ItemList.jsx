@@ -8,7 +8,11 @@ import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import CloseIcon from "@mui/icons-material/Close";
 
-import { itemRemoveQuantity, itemAddQuantity } from "./ItemListSlice";
+import {
+    itemRemoveQuantity,
+    itemAddQuantity,
+    itemRemoveItems,
+} from "./ItemListSlice";
 import { basketAddFromItemPage } from "../basket/BasketListSlice";
 
 import SwipeImage from "./SwipeImage";
@@ -33,7 +37,7 @@ const style = {
 
 export default function ItemList() {
     const [open, setOpen] = React.useState(false);
-    const handleClose = () => setOpen(false);
+    const dispatch = useDispatch();
 
     const { itemdata } = useSelector((state) => state.itempage);
     const {
@@ -51,7 +55,12 @@ export default function ItemList() {
         additional_list,
     } = itemdata;
 
-    const dispatch = useDispatch();
+    React.useEffect(() => {
+        if (Object.keys(itemdata).length) {
+            setOpen(true);
+        }
+    }, [itemdata]);
+
     const handleDecrement = () => {
         dispatch(itemRemoveQuantity());
     };
@@ -60,14 +69,14 @@ export default function ItemList() {
     };
     const handleBasket = (item) => {
         setOpen(false);
+        dispatch(itemRemoveItems());
         dispatch(basketAddFromItemPage(item));
     };
 
-    React.useEffect(() => {
-        if (Object.keys(itemdata).length) {
-            setOpen(true);
-        }
-    }, [itemdata]);
+    const handleClose = () => {
+        dispatch(itemRemoveItems());
+        setOpen(false);
+    };
 
     return (
         <div>

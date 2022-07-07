@@ -18,7 +18,7 @@ const ThanksBlock = () => {
                 Ми зателефонуємо найближчим часом
             </Typography>
             <Link to="/" className="thanks_link">
-               Повернутися на головну
+                Повернутися на головну
             </Link>
         </Container>
     );
